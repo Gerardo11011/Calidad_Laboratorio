@@ -20,4 +20,4 @@ Lineas:
 * Agregada
   * Etiqueta: **No tiene**
 
-*X es el numero de lineas en cada una*
+* *X es el numero de lineas en cada una* *
