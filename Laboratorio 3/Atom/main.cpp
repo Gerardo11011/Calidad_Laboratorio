@@ -17,7 +17,7 @@ extern bool vacioArch; //.m
 
 int main() {
     string nombreArchivo;
-    cout << "Introduzca el nombre el archivo a leer: ";
+    cout << "Introduzca el nombre del archivo a leer: ";
     cin >> nombreArchivo;
     Lectora lector (nombreArchivo);
     Calcular calcu;

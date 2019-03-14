@@ -89,7 +89,6 @@ public:
         if (Multi_Coment == false){
           if (Linea[0] >= 'A' && Linea[0] <= '}'){
             lineaCodigo++;
-            cout << Linea << endl;
           }
           if (Linea[0] == '/' && Linea[1] == '/'){
             lineaComentarios++;
