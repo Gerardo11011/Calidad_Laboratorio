@@ -8,9 +8,9 @@ Clase:
 * Nueva
 * Rehusada
 - - - -
-
 Lineas:
 * Base
 * Modificada
 * Eliminada
 * Agregada
+- - - -
