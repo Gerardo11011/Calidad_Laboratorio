@@ -13,4 +13,3 @@ Lineas:
 * Modificada
 * Eliminada
 * Agregada
-- - - -
