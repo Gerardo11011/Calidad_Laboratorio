@@ -10,11 +10,13 @@ Clase:
 - - - -
 Lineas:
 * Funciones
-  * Etiqueta: **//.i**
+  * Etiqueta: **//.i**  
 * Base
   * Etiqueta: **//.b=x**
 * Modificada
-  * Etiqueta: **//.m=x**
+  * Etiqueta: **//.m**
 * Eliminada
   * Etiqueta: **//.d=x**
 * Agregada
+  * Etiqueta: **No tiene**
+*X es el numero de lineas en cada una*
