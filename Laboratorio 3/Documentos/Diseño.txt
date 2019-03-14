@@ -1,0 +1,12 @@
+Se Realizaran 4 clases, una que es imprimir, otra que es Calcular, y se mantienen lectora y main
+
+Calcular es la que se encargara de hacer todas las operaciones.
+	Obtener los valores de cada variable
+	Sacar correlacion
+	Sacar regresion
+Lecotra leera el archivo y hara los pasos basicos
+	Conseguir los valores iniciales
+	Comprobar que no este vacio el archivo
+imprimir Agarra todo y lo imprime
+	Imprime los resultados
+	Imprime mensaje de archivo vacio

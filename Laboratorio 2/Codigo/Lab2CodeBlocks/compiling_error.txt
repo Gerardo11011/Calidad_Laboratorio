@@ -1,0 +1,4 @@
+D:\CODIGOS\CALIDAD\Laboratorio 2\Codigo\Lab2CodeBlocks\main.cpp:8:21: fatal error: Lectora.h: No such file or directory
+ #include "Lectora.h"
+                     ^
+compilation terminated.

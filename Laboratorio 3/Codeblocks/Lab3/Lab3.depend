@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1551180794 source:d:\codigos\calidad\laboratorio 3\codeblocks\lab3\main.cpp
+	<iostream>
+	<vector>
+	<iomanip>
+	"Lectora.h"
+	"Calcular.h"
+
+1551181329 d:\codigos\calidad\laboratorio 3\codeblocks\lab3\include\lectora.h
+	<fstream>
+	<algorithm>
+	<cctype>
+	<sstream>
+	<iostream>
+	<vector>
+	<string>
+
+1551180794 d:\codigos\calidad\laboratorio 3\codeblocks\lab3\include\calcular.h
+	<iostream>
+	<string>
+	<vector>
+	<cmath>
+	<iomanip>
+	<numeric>
+	<algorithm>
+

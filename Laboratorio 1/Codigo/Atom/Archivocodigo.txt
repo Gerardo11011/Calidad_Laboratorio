@@ -1,0 +1,23 @@
+class Imprimir {
+private:
+    int iBlanco;
+    int iComentario;
+    int iCodigos;
+    int Total;
+    fstream Archivo;
+public:
+    Imprimir(int Blanco, int Comentarios, int Codigo){
+    iCodigos = Codigo;
+    iBlanco = Blanco;
+    iComentario= Comentarios;
+    Total = Codigo + Comentarios + Blanco;
+}
+    void Desplegar(){
+        cout << "-----------------------------------------------"<<endl;
+        cout << "Cantidad de lineas en blanco: " << iBlanco << endl;
+        cout << "Cantidad de lineas con comentarios: " << iComentario << endl;
+        cout << "Cantidad de lineas con codigo: " << iCodigos << endl;
+        cout << "-----------------------------------------------" << endl;
+        cout << "Cantidad total de lineas: " << Total << endl;
+    }
+};

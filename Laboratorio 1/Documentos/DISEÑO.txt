@@ -1,0 +1,14 @@
+Tres clases las cuales sera:
+
+1.-Main en el que se llamaran todas las funciones para realizar
+2.- Lectora que hace la lectura del archivo y cuenta las lineas del codigo
+3.- Imprimir que recibe los datos de la clase lectora y imprime de acuerdo al formato que se desea
+
+Lectora:
+Contiene los gets y y es donde se habra funcion para calcular las lineas, tambien sera la encargada de la verificacion de los archivos
+
+Imprimir:
+Solo recbie e imprime de acuerdo al parametro
+
+Main:
+Llamma y manda los datos necesarios

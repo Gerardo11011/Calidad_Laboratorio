@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1548732075 source:d:\codigos\calidad\laboratorio 1\codigo\lab1\main.cpp
+	<iostream>
+	"Lectora.h"
+	"Imprimir.h"
+	<fstream>
+
+1548732189 d:\codigos\calidad\laboratorio 1\codigo\lab1\include\lectora.h
+	<fstream>
+	<algorithm>
+	<cctype>
+	<iostream>
+
+1548731976 d:\codigos\calidad\laboratorio 1\codigo\lab1\include\imprimir.h
+

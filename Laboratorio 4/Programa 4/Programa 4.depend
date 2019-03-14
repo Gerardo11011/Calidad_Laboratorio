@@ -1,0 +1,43 @@
+# depslib dependency file v1.0
+1552396912 source:d:\codigos\calidad\laboratorio 3\codeblocks\programa 4\main.cpp
+	<iostream>
+	<vector>
+	<iomanip>
+	"Calcular.h"
+	"Imprimir.h"
+	<cmath>
+	<stdio.h>
+	<stdlib.h>
+
+1552396699 d:\codigos\calidad\laboratorio 3\codeblocks\programa 4\include\calcular.h
+	<iostream>
+	<vector>
+	<iomanip>
+	<math.h>
+	<cmath>
+
+1552396699 d:\codigos\calidad\laboratorio 3\codeblocks\programa 4\include\imprimir.h
+	<iostream>
+	<iomanip>
+
+1552464436 source:d:\codigos\calidad\laboratorio 4\programa 4\main.cpp
+	<iostream>
+	<vector>
+	<iomanip>
+	"Calcular.h"
+	"Imprimir.h"
+	<cmath>
+	<stdio.h>
+	<stdlib.h>
+
+1552463394 d:\codigos\calidad\laboratorio 4\programa 4\include\calcular.h
+	<iostream>
+	<vector>
+	<iomanip>
+	<math.h>
+	<cmath>
+
+1552463418 d:\codigos\calidad\laboratorio 4\programa 4\include\imprimir.h
+	<iostream>
+	<iomanip>
+

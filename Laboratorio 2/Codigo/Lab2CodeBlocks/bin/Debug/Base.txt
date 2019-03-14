@@ -1,0 +1,85 @@
+//esta parte es base
+//.b=65
+class Lista
+{
+sdadad
+sfrhgf
+fgdrg
+//.i
+fdgdfg
+gret347ads
+sda
+  linea;
+dsaas;
+dasda
+asd
+ert
+fdg
+sdf
+werf
+dsf
+sdf
+  linea;
+dsaas;
+dasda
+asd
+ert
+fdg
+//.i
+sdf
+werf //.m
+dsf
+sdf
+.//i
+  linea;
+dsaas;
+dasda
+asd
+ert
+fdg
+sdf
+werf //.m
+dsf
+sdf
+  linea;
+dsaas;
+dasda
+asd
+ert
+fdg
+sdf
+werf
+dsf
+sdf
+  linea;
+dsaas;
+dasda
+asd
+ert
+fdg
+sdf
+//.i
+werf
+dsf
+sdf
+  linea;
+dsaas;
+dasda
+asd
+ert
+fdg
+sdf
+werf
+dsf
+sdf
+  linea;
+dsaas;
+dasda
+asd
+ert
+fdg
+sdf
+werf
+//.i
+dsf
+sdf

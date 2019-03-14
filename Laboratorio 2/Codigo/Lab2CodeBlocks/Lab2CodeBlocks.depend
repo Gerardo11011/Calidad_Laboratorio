@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1549951188 source:d:\codigos\calidad\laboratorio 2\codigo\lab2codeblocks\main.cpp
+	<iostream>
+	"Lectora.h"
+	"Imprimir.h"
+	"Estructura.h"
+	<fstream>
+	<string>
+	<vector>
+	<map>
+	<fstream>
+
+1549951209 d:\codigos\calidad\laboratorio 2\codigo\lab2codeblocks\include\lectora.h
+	<fstream>
+	<algorithm>
+	<cctype>
+	<iostream>
+	<string>
+
+1549894252 d:\codigos\calidad\laboratorio 2\codigo\lab2codeblocks\include\estructura.h
+	<iostream>
+	<string>
+
+1549951228 d:\codigos\calidad\laboratorio 2\codigo\lab2codeblocks\include\imprimir.h
+	<iostream>
+	<vector>
+	"Estructura.h"
+	<fstream>
+

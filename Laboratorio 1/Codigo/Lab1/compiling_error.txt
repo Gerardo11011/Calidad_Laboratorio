@@ -1,0 +1,4 @@
+D:\CODIGOS\CALIDAD\Laboratorio 1\Codigo\Lab1\main.cpp:2:22: fatal error: Imprimir.h: No such file or directory
+ #include "Imprimir.h"
+                      ^
+compilation terminated.

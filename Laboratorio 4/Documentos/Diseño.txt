@@ -1,0 +1,13 @@
+Diseño del programa:
+
+Se reutilizara el main, la clase imprimir y calcular del anterior programa
+
+main:
+	Llamara a las demas funciones y mandara datos
+	Tambien validara los datos ingresados mandara a llamar a imprimir para imprimir el mensaje correcto
+
+Imprimir:
+	Imprimira los diferentes mensajes y el resultado del problema
+
+Calcular: 
+	Se utilizara para calcular gamma y para hacer los calculos necesarios para poder llegar al resultado esperado
