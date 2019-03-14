@@ -18,5 +18,6 @@ Lineas:
 * Eliminada
   * Etiqueta: **//.d=x**
 * Agregada
-  * Etiqueta: **No tiene** &nbsp;
+  * Etiqueta: **No tiene**
+&nbsp;
 *X es el numero de lineas en cada una*
