@@ -26,6 +26,7 @@ class Lectora {
 
     public:
       //.i
+      //Constructor
       Lectora (string nombre){
         archivo.open(nombre.c_str());
         xK = 0; //.m
@@ -33,18 +34,22 @@ class Lectora {
         totales = 0; //.m
       }
       //.i
+      //Destructor
       ~Lectora(){
         archivo.close();
       }
       //.i
+      //Funcion que obtiene el valor de xK
       int getxK(){
         return xK; //.m
       }
       //.i
+      //Funcion que obtiene el valor de la cantidad de datos ingresados
       int getTotales(){
         return totales; //.m
       }
       //.i
+      //Funcion que comprueba si existe el archivo
       bool existeArchivo(){
         if (archivo.is_open()) {
           return true;
@@ -55,6 +60,7 @@ class Lectora {
       }
 
       //.i
+      //Funcion que cuenta y lee los datos del archivo y los almacenas
       void Contar(vector<float>&NumX,vector<float>&NumY){
         string linea;
         string X;
@@ -63,16 +69,19 @@ class Lectora {
         int primeralinea = 0;
         while(! archivo.eof()){
             getline(archivo,linea);
+            //IF que verifica que el archivo no este vacio
             if (linea[0] == '\0' && vacio == false && primeralinea == 0) {
               vacio = true;
               primeralinea++;
               vacioArch = true;
             }
             primeralinea++;
+            //almacena el dato del primer renglon unciamente
             if(renglon == 0){
                 xK = atoi(linea.c_str());
                 renglon++;
             }
+            //Lee el resto de las lineas y almacena los valores que estan en el archivo
             else if(renglon > 0 && linea.size() > 1){
                 X = linea.substr(0,linea.find(','));
                 stringstream ss;

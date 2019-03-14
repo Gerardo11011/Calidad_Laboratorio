@@ -24,7 +24,7 @@ class Imprimir {
 
     public:
       //.i
-
+      //Funcion que imprime si el archivo esta vacio o manda a imprimir los resultados
       void vacioArchivo(bool vacio, int N, int K, float R, float RR, float  B0, float B1, float YK) {
         if (vacio == true) {
           cout << "El archivo esta vacio" << endl;
@@ -34,6 +34,7 @@ class Imprimir {
         }
       }
       //.i
+      //Funcion que imprime los resultados
       void imprimeResultados(int N, int K, float R, float RR, float  B0, float B1, float YK) {
         cout << setprecision(5) << fixed;
         cout << "N = " << N << endl;

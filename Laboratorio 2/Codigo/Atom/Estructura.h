@@ -11,6 +11,7 @@
 using namespace std;
 
 
+//Estructuada del objeto estructura
 struct estructura {
   string nombreClase;
   int lineasBases;

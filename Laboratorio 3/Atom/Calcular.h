@@ -27,26 +27,32 @@ private:
 
 public:
   //.i
+  //Funcion que obtiene el valor de X
   float getX(){
     return X;
   }
   //.i
+  //Funcion que obtiene el valor de Y
   float getY(){
     return Y;
   }
   //.i
+  //Funcion que obtiene el valor de la Correlacion
   float getcorrelation(){
     return Correlation;
   }
   //.i
+  //Funcion que obtiene el valor de B0
   float getB0(){
     return B0;
   }
   //.i
+  //Funcion que obtiene el valor de B1
   float getB1(){
     return B1;
   }
   //.i
+  //Funcion que realiza las Sumatorias para obtener las variables necesarias para el calculo de la correlacion
   void Sumatorias(vector<float> NumX,vector<float> NumY, int iN){
       //accumulate(NumX.begin(),NumX.end(),X);
       //accumulate(NumY.begin(),NumY.end(),Y);
@@ -59,11 +65,13 @@ public:
         }
     }
     //.i
+    //Funcion que realza el calcula el calculo de la correlacion
     void Correlacion(vector<float>&NumX,vector<float>&NumY, int iN){
         Sumatorias(NumX, NumY,iN);
         Correlation =((iN * XY - X * Y) / (sqrt(iN * XX - X * X) * sqrt(iN * YY -Y * Y)));
     }
     //.i
+    //Funcion que calcula el valor de la regresion
     void Regresion(vector<float>&NumX,vector<float>&NumY, int iN){
         B1 = ((( X * Y ) - (iN * XY)) / (( X * X ) - ( iN * XX )));
         B0 = ((Y - (B1 * X)) / iN);

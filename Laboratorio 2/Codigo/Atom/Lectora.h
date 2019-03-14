@@ -55,22 +55,28 @@ public:
       return lineasAgregadas;
     }
     //.i
+    //Funcion que obtiene el valor de las lineas bases
     int getLineasBases(){
       return lineasBases;
     }
     //.i
+    //Funcion que obtiene el valor de las lineas borradas
     int getLineasBorradas(){
       return lineasBorradas;
     }
     //.i
+    //Funcion que obtiene el valor de las lineas totales
     int getLineasTotales(){
       return lineasTotales;
     }
     //.i
+    //Funcion que obtiene el valor de los items (funciones)
     int getItems(){
       return items;
     }
     //.i
+
+    //Funcion que asigna el tipo (BASE, NUEVA o REUSADA) de la clase
     string getTipo(){
       if (lineasBases > 0 && (lineasModificadas > 0 || lineasBorradas > 0 || lineasAgregadas > 0)) {
         tipo = "BASE";
@@ -87,6 +93,8 @@ public:
       return tipo;
     }
     //.i
+
+    //Obtiene el nombre de la clase
     string getNombreClase(){
       string aux = nombreClase;
       int target = aux.find('.');

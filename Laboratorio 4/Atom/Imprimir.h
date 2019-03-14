@@ -20,6 +20,7 @@ class Imprimir {
       //.d=
 
       //.i
+      //Funcion que regresa un booleano que verifica si los valores son validos o no
       bool errorResultados(float x, int dof){
         if (x < 0 || dof <= 0) {
           return true;
@@ -27,12 +28,14 @@ class Imprimir {
         return false;
       }
       //.i
+      //Funcion que immprime los resultados obtenidos
       void imprimeResultados(float x, int dof, float p) {
           cout << "x = " << x << endl;
           cout << "dof = " << dof << endl;
           cout << "p = " << p << endl;
       }
       //.i
+      //Funcion que imprime el mensaje de error
       void imprimeError() {
         cout << "ERROR valores invalidos" << endl;
       }
