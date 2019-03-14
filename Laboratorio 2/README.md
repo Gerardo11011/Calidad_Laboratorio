@@ -9,7 +9,12 @@ Clase:
 * Rehusada
 - - - -
 Lineas:
+* Funciones
+  * Etiqueta: **//.i**
 * Base
+  * Etiqueta: **//.b=x**
 * Modificada
+  * Etiqueta: **//.m=x**
 * Eliminada
+  * Etiqueta: **//.d=x**
 * Agregada
