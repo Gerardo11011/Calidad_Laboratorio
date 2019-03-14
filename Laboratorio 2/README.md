@@ -1,6 +1,6 @@
 # Codigo 2
 
-Codigo que clasifica las clases y las lineas de codigo en los siguientes tipos
+Clasifica las **clases** y las __líneas de código__ en los siguientes tipos
 &nbsp;
 
 Clase:

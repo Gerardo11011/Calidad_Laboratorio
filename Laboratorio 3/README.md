@@ -1,3 +1,3 @@
-# Codigos y documentacion de los codigos de calidad
+# Laboratorio 3
 
-Codigos del laboratorio para la materia de calidad y pruebas de software
+Calcula la **regresión** y la **correlación** de una serie de puntos

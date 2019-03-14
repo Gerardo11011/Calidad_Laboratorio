@@ -1,3 +1,3 @@
-# Codigos y documentacion de los codigos de calidad
+# Laboratorio 4
 
-Codigos del laboratorio para la materia de calidad y pruebas de software
+Calcula el valor de **P** con el método Simpson
