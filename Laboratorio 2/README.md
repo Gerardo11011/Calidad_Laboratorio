@@ -22,17 +22,17 @@ Clasifica las **clases** y las __líneas de código__ en los siguientes tipos
 - - - -
 ## Formato de impresion ##
 ``
-PARTES BASE: <br>
-main: T=95, I=0, B=34, D=0, M=0, A=61<br>
-Lectora: T=112, I=12, B=74, D=0, M=1, A=38<br>
--------------------------------------------<br>
-PARTES NUEVAS:<br>
-Imprimir: T=42, I=5<br>
-estructura: T=15, I=0<br>
--------------------------------------------<br>
-PARTES REUSADAS:<br>
--------------------------------------------<br>
-Total de LDC=264<br>
+PARTES BASE: <br />
+main: T=95, I=0, B=34, D=0, M=0, A=61<br />
+Lectora: T=112, I=12, B=74, D=0, M=1, A=38<br />
+-------------------------------------------<br />
+PARTES NUEVAS:<br />
+Imprimir: T=42, I=5<br />
+estructura: T=15, I=0<br />
+-------------------------------------------<br />
+PARTES REUSADAS:<br />
+-------------------------------------------<br />
+Total de LDC=264<br />
 ``
 
 *X es el numero de lineas en cada una*
