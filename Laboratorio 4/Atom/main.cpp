@@ -77,7 +77,7 @@ int main() {
   else {
     imprime.imprimeError();
   }
-  
+
   //system("pause");
   return 0;
 }

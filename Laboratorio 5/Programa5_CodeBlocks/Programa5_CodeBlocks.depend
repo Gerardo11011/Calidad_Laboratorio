@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1553587060 source:d:\codigos\calidad\laboratorio 5\programa5_codeblocks\main.cpp
+	<iostream>
+	<vector>
+	<iomanip>
+	"Calcular.h"
+	"Imprimir.h"
+	<cmath>
+	<stdio.h>
+	<stdlib.h>
+
+1553586971 d:\codigos\calidad\laboratorio 5\programa5_codeblocks\include\calcular.h
+	<iostream>
+	<vector>
+	<iomanip>
+	<math.h>
+	<cmath>
+
+1553587105 d:\codigos\calidad\laboratorio 5\programa5_codeblocks\include\imprimir.h
+	<iostream>
+	<iomanip>
+
