@@ -8,7 +8,9 @@ Datos que recibe:
 - - - -
 ## Formato de impresion ##
 ```
-Introduzca el nombre del archivo a leer: Arch1.txt
+Ingrese el valor de p: 0.45
+Ingrese el valor dof: 15
+
 p = 0.45000
 dof = 15
 x = 1.75305
