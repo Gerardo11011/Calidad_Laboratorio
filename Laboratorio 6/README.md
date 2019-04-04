@@ -8,8 +8,10 @@ Calcula el valor de los siguientes datos:
 * Una predicción mejorada yk, donde yk = β0 + β1 xk
 * El intervalo de predicción al 70% para tal estimado
 &nbsp;
+
 Datos que recibe:
 * Nombre de archivo
+
 - - - -
 ## Formato de impresion ##
 ```
