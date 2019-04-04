@@ -10,12 +10,19 @@ using namespace std;
 
 class CalcularX {
     public:
-      //Funcion que calcula el valor de x para la significancia
+      //Funcion que calcula el valor de x para comenzar a calcular la significancia
       float CalculaX(float corre, float correa2, float n){
         float auxNum = sqrt(n-2);
         float auxDen = sqrt(1-correa2);
         float x = abs(corre) * auxNum / auxDen;
         return x;
+      }
+
+      //Funcion que calcula la significancia
+      float significancia(float p){
+        float signi = 0.00000;
+        signi = 1 - 2 * p;
+        return signi;
       }
 
       ///Funcion que calcula la desviacion estandar
@@ -32,6 +39,7 @@ class CalcularX {
         return ope;
       }
 
+      //Funcion que calcula el promedio del vector
       float promX(vector <float> &NumX){
         float acum = 0.00000;
         float tamano = NumX.size();
@@ -43,6 +51,7 @@ class CalcularX {
         return average;
       }
 
+      //Funcion que calcula el rango de un intervalo
       float rango(float distT, float desviacion, float N, float xk, float aveX, vector <float> &NumX){
         float tamano = NumX.size();
         float denominador = 0.00000, aux = 0.00000;
@@ -63,12 +72,14 @@ class CalcularX {
         return result;
       }
 
+      //Funcion que calcula el Limite superior
       float rangoUP(float yk, float rango){
         float result = 0.00000;
         result = yk + rango;
         return result;
       }
 
+      //Funcion que calcula el Limite Inferior
       float rangoLP(float yk, float rango){
         float result = 0.00000;
         result = yk - rango;

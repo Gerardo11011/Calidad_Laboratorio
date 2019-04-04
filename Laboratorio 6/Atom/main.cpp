@@ -40,17 +40,17 @@ int main() {
         b0 = calcu.getB0();//.m
         b1 = calcu.getB1();//.m
         yk = calcu.getB0()+(calcu.getB1()*lector.getxK());//.m
-        imp.vacioArchivo(vacioArch, N, xK, corre, correa2, b0, b1, yk);
+
     }
     else {
       imp.imprimeNoexiste(); //.m
     }
 
-    float x = calcux.CalculaX(corre,correa2, N);
+
 
 
     ///////////////////
-
+    float x = calcux.CalculaX(corre,correa2, N);
     float dof = N-2;
     //Pay es el valor de pi
     float pay = 3.14159265358979323846;
@@ -85,7 +85,7 @@ int main() {
       }while (abs(aux) > errorp);
 
 
-      signi = 1 - 2 * p;
+      signi = calcux.significancia(p);
 
 
       //////////////////////////////////////////
@@ -125,17 +125,23 @@ int main() {
       dire1 = dire2;
       }
 
+
       float distT = x;
 
       float ene = N;
 
+      //Variable que guarda el valor de la desviacion estandar
       float desviacion = calcux.desviacionStandar(ene, b0, b1, NumerosX, NumerosY);
+      //Variable que guarda el valor del promedio del vector x
       float averageX = calcux.promX(NumerosX);
+      //Variable que guarda el valor del rango del intervalo
       float rango = calcux.rango(distT, desviacion, ene, xK, averageX, NumerosX);
+      //Variable que guarda el valor del limite superior
       float rangoUP = calcux.rangoUP(yk, rango);
+      //Variable que guarda el valor del limite inferior
       float rangoLP = calcux.rangoLP(yk, rango);
-
-      imp.imprimeFaltantes(signi, rango, rangoUP, rangoLP);
+      //Se manda a imprimir los valores calculados
+      imp.vacioArchivo(vacioArch, N, xK, corre, correa2, b0, b1, yk, signi, rango, rangoUP, rangoLP);
 
 
     system("pause");

@@ -25,17 +25,17 @@ class Imprimir {
     public:
       //.i
       //Funcion que imprime si el archivo esta vacio o manda a imprimir los resultados
-      void vacioArchivo(bool vacio, int N, int K, float R, float RR, float  B0, float B1, float YK) {
+      void vacioArchivo(bool vacio, int N, int K, float R, float RR, float  B0, float B1, float YK, float signi, float rango, float LS, float LI) {
         if (vacio == true) {
           cout << "El archivo esta vacio" << endl;
         }
         else {
-          imprimeResultados(N, K, R, RR, B0, B1, YK);
+          imprimeResultados(N, K, R, RR, B0, B1, YK, signi, rango, LS, LI);
         }
       }
       //.i
       //Funcion que imprime los resultados
-      void imprimeResultados(int N, float K, float R, float RR, float  B0, float B1, float YK) {
+      void imprimeResultados(int N, float K, float R, float RR, float  B0, float B1, float YK, float signi, float rango, float LS, float LI) {
         cout << setprecision(5) << fixed;
         cout << "N = " << N << endl;
         cout << "xk = " << K << endl;
@@ -44,9 +44,6 @@ class Imprimir {
         cout << "b0 = " << B0 << endl;
         cout << "b1 = " << B1 <<endl;
         cout << "yk = " << YK << endl;
-      }
-
-      void imprimeFaltantes(float signi, float rango, float LS, float LI) {
         cout << setprecision(10) << fixed;
         cout << "sig = " << signi << endl;
         cout << setprecision(5) << fixed;
