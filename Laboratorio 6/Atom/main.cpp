@@ -127,6 +127,8 @@ int main() {
       dire1 = dire2;
       }
 
+      float desviacion = calcux.desviacionStandar(N, b0, b1, NumerosX, NumerosY);
+
       imp.imprimeFaltantes(signi1, x);
 
 
