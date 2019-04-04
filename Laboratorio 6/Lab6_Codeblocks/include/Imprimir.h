@@ -35,7 +35,7 @@ class Imprimir {
       //.i
       //Funcion que imprime los resultados
       void imprimeResultados(int N, float K, float R, float RR, float  B0, float B1, float YK, float signi, float rango, float LS, float LI) { //.m
-        cout << setprecision(5) << fixed;
+        cout << setprecision(5) << fixed << endl;
         cout << "N = " << N << endl;
         cout << "xk = " << K << endl;
         cout << "r = " << R << endl;
@@ -48,17 +48,17 @@ class Imprimir {
         cout << setprecision(5) << fixed;
         cout << "ran = " << rango << endl;
         cout << "LS = " << LS << endl;
-        cout << "LI = " << LI << endl;
+        cout << "LI = " << LI << endl << endl;
       }
 
       //.i
       void imprimeNoexiste() {
-        cout << "El archivo no existe" << endl;
+        cout << "El archivo no existe" << endl << endl;
       }
 
       //.i
       void imprimeErrorpDof() {
-        cout << "ERROR valores invalidos" << endl;
+        cout << "ERROR valores invalidos" << endl << endl;
       }
 
 };

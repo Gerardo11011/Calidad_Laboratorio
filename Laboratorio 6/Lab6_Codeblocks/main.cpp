@@ -5,18 +5,19 @@
 #include <iostream>
 #include <vector>
 #include <iomanip>
+#include <cmath>
+#include <stdio.h>
+#include <stdlib.h>
+
 #include "Lectora.h"
 #include "Calcular.h"
 #include "Imprimir.h"
 #include "CalcularP.h"
 #include "Rango.h"
-#include <cmath>
-#include <stdio.h>
-#include <stdlib.h>
 #include "Significancia.h"
 using namespace std;
-vector<float>NumerosX;
-vector<float>NumerosY;
+
+
 extern bool vacioArch;
 
 //.b=33
@@ -28,6 +29,8 @@ int main() {
   cin >> nombreArchivo;
   Lectora lector (nombreArchivo);
   Calcular calcu;
+  vector<float>NumerosX;
+  vector<float>NumerosY;
   float corre, correa2, b0, b1, yk, xK;
   int N;
   Significancia signi;
