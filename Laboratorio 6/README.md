@@ -1,6 +1,6 @@
 # Laboratorio 6
 
-Calcula el valor de los siguientes datos:
+## Calcula el valor de los siguientes datos: ##
 * La cantidad de parejas de datos leídas (N)
 * Los coeficientes de correlación rx,y y r2
 * La significancia de tal correlación
@@ -9,7 +9,7 @@ Calcula el valor de los siguientes datos:
 * El intervalo de predicción al 70% para tal estimado
 &nbsp;
 
-Datos que recibe:
+## Datos que recibe:##
 * Nombre de archivo
 
 - - - -
