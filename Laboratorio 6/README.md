@@ -12,7 +12,6 @@
 ## Datos que recibe: ##
 * Nombre de archivo
 
-- - - -
 ## Formato de impresion ##
 ```
 Introduzca el nombre del archivo a leer: Arch1.txt
