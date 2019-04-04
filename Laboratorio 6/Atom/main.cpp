@@ -24,12 +24,12 @@ int main() {
     cin >> nombreArchivo;
     Lectora lector (nombreArchivo);
     Calcular calcu;
-    float corre, correa2, b0, b1, yk;
-    int N, xK;
+    float corre, correa2, b0, b1, yk, xK;
+    int N;
     CalcularX calcux;
     Imprimir imp;
 
-    if(lector.existeArchivo() == true){
+    if(lector.existeArchivo()){
         lector.Contar(NumerosX,NumerosY);
         calcu.Correlacion(NumerosX, NumerosY, lector.getTotales());
         calcu.Regresion(NumerosX, NumerosY, lector.getTotales());
@@ -43,12 +43,13 @@ int main() {
         imp.vacioArchivo(vacioArch, N, xK, corre, correa2, b0, b1, yk);
     }
     else {
-      cout << "El archivo no existe" << endl;
+      imp.imprimeNoexiste(); //.m
     }
 
     float x = calcux.CalculaX(corre,correa2, N);
 
 
+    ///////////////////
 
     float dof = N-2;
     //Pay es el valor de pi
@@ -56,7 +57,6 @@ int main() {
     //gamma1, gamma2, ope y aux son auxiliares para almacenar valores|| Gamma es el valor calculado total de gamma
     float aux = 100.0000000000, gamma = 0.0000000000, ope = 0.0000000000;
     float gamma1 = 0.0000000000, gamma2 = 0.0000000000;
-    float errorsig  = 0.00000001;
     float errorp = 0.0001;
     float p = 0.0000000000, p1 = 0.00000;
     //num_seg son el total de iteraciones que se realizaran para el calculo de los valores f(x)
@@ -74,7 +74,7 @@ int main() {
 
 
       //almacena el valor para comprobar el grado de error
-      float signi1, signi2, auxsigni;
+      float signi;
       //ciclo que vuelve a calcular los valores de p y los comprueba hasta que se obtenga el grado de error deseado
       do{
         p = calcuP.calculaValor(x,dof,num_seg,gamma);
@@ -85,9 +85,7 @@ int main() {
       }while (abs(aux) > errorp);
 
 
-      signi1 = 1 - 2 * p;
-      signi2 = 1 - 2 * p1;
-      auxsigni = signi1 - signi2;
+      signi = 1 - 2 * p;
 
 
       //////////////////////////////////////////
@@ -127,9 +125,17 @@ int main() {
       dire1 = dire2;
       }
 
-      float desviacion = calcux.desviacionStandar(N, b0, b1, NumerosX, NumerosY);
+      float distT = x;
 
-      imp.imprimeFaltantes(signi1, x);
+      float ene = N;
+
+      float desviacion = calcux.desviacionStandar(ene, b0, b1, NumerosX, NumerosY);
+      float averageX = calcux.promX(NumerosX);
+      float rango = calcux.rango(distT, desviacion, ene, xK, averageX, NumerosX);
+      float rangoUP = calcux.rangoUP(yk, rango);
+      float rangoLP = calcux.rangoLP(yk, rango);
+
+      imp.imprimeFaltantes(signi, rango, rangoUP, rangoLP);
 
 
     system("pause");

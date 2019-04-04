@@ -20,7 +20,7 @@ bool vacioArch = false; //.m
 class Lectora {
     private:
       fstream archivo;
-      int xK;
+      float xK;
       int renglon;
       int totales;
 

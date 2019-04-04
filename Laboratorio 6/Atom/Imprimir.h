@@ -35,7 +35,7 @@ class Imprimir {
       }
       //.i
       //Funcion que imprime los resultados
-      void imprimeResultados(int N, int K, float R, float RR, float  B0, float B1, float YK) {
+      void imprimeResultados(int N, float K, float R, float RR, float  B0, float B1, float YK) {
         cout << setprecision(5) << fixed;
         cout << "N = " << N << endl;
         cout << "xk = " << K << endl;
@@ -46,11 +46,17 @@ class Imprimir {
         cout << "yk = " << YK << endl;
       }
 
-      void imprimeFaltantes(float signi, float rango) {
+      void imprimeFaltantes(float signi, float rango, float LS, float LI) {
         cout << setprecision(10) << fixed;
         cout << "sig = " << signi << endl;
         cout << setprecision(5) << fixed;
-        cout << "ran = " << rango;
+        cout << "ran = " << rango << endl;
+        cout << "LS = " << LS << endl;
+        cout << "LI = " << LI << endl;
+      }
+
+      void imprimeNoexiste() {
+        cout << "El archivo no existe" << endl;
       }
 
 };
