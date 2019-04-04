@@ -27,12 +27,12 @@ int main() {
     float corre, correa2, b0, b1, yk;
     int N, xK;
     CalcularX calcux;
+    Imprimir imp;
 
     if(lector.existeArchivo() == true){
         lector.Contar(NumerosX,NumerosY);
         calcu.Correlacion(NumerosX, NumerosY, lector.getTotales());
         calcu.Regresion(NumerosX, NumerosY, lector.getTotales());
-        Imprimir imp;
         N = lector.getTotales();//.m
         xK = lector.getxK(); //.m
         corre = calcu.getcorrelation(); //.m
@@ -88,9 +88,47 @@ int main() {
       signi1 = 1 - 2 * p;
       signi2 = 1 - 2 * p1;
       auxsigni = signi1 - signi2;
-      cout << endl;
-      cout << setprecision(10);
-      cout << "SIGNIFICANCIA: " << signi1;
+
+
+      //////////////////////////////////////////
+
+
+      p1 = calcuP.calculaValor(x,dof,num_seg,gamma);
+
+      float errorT = 0.000000000001, difp = 1.00000;
+
+      float pt = 0.35, d = x / 2, p2 = 0.00000;
+      bool dire1 = false, dire2 = false;
+      x = 1.00000;
+
+
+      //ciclo que vuelve a calcular los valores de p y los comprueba hasta que se obtenga el grado de error deseado
+      while (abs(difp) > errorT) {
+        //Si p es menor que la p introducida se corrige los valores de x
+        if (p1 < pt) {
+          x = x + d;
+          p2 = calcuP.calculaValor(x,dof,num_seg,gamma);
+          dire2 = true;
+      }
+      else{
+        x = x - d;
+        p2 = calcuP.calculaValor(x,dof,num_seg,gamma);
+        dire2 = false;
+      }
+      //Se calcula el error de p
+      difp = p2-p1;
+      //Se guarda el nuevo valor de p
+      p1 = p2;
+      //If que comprueba si hubo cambio de direccion
+      if (dire1 != dire2) {
+        d = d / 2;
+      }
+      //Se le asigna la misma direccion por si cambia de direccion
+      dire1 = dire2;
+      }
+
+      imp.imprimeFaltantes(signi1, x);
+
 
     system("pause");
     return 0;

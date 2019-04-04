@@ -46,6 +46,13 @@ class Imprimir {
         cout << "yk = " << YK << endl;
       }
 
+      void imprimeFaltantes(float signi, float rango) {
+        cout << setprecision(10) << fixed;
+        cout << "sig = " << signi << endl;
+        cout << setprecision(5) << fixed;
+        cout << "ran = " << rango;
+      }
+
 };
 
 #endif
