@@ -9,7 +9,7 @@
 * El intervalo de predicción al 70% para tal estimado
 &nbsp;
 
-## Datos que recibe:##
+## Datos que recibe: ##
 * Nombre de archivo
 
 - - - -
