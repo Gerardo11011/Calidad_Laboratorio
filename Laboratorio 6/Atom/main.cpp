@@ -9,10 +9,11 @@
 #include "Calcular.h"
 #include "Imprimir.h"
 #include "CalcularP.h"
+#include "Rango.h"
 #include <cmath>
 #include <stdio.h>
 #include <stdlib.h>
-#include "CalcularX.h"
+#include "Significancia.h"
 using namespace std;
 vector<float>NumerosX;
 vector<float>NumerosY;
@@ -26,8 +27,9 @@ int main() {
     Calcular calcu;
     float corre, correa2, b0, b1, yk, xK;
     int N;
-    CalcularX calcux;
+    Significancia signi;
     Imprimir imp;
+    Rango intervalo;
 
     if(lector.existeArchivo()){
         lector.Contar(NumerosX,NumerosY);
@@ -50,7 +52,7 @@ int main() {
 
 
     ///////////////////
-    float x = calcux.CalculaX(corre,correa2, N);
+    float x = signi.CalculaX(corre,correa2, N);
     float dof = N-2;
     //Pay es el valor de pi
     float pay = 3.14159265358979323846;
@@ -74,7 +76,7 @@ int main() {
 
 
       //almacena el valor para comprobar el grado de error
-      float signi;
+      float significancia;
       //ciclo que vuelve a calcular los valores de p y los comprueba hasta que se obtenga el grado de error deseado
       do{
         p = calcuP.calculaValor(x,dof,num_seg,gamma);
@@ -85,7 +87,7 @@ int main() {
       }while (abs(aux) > errorp);
 
 
-      signi = calcux.significancia(p);
+      significancia = signi.calcuSigni(p);
 
 
       //////////////////////////////////////////
@@ -131,17 +133,17 @@ int main() {
       float ene = N;
 
       //Variable que guarda el valor de la desviacion estandar
-      float desviacion = calcux.desviacionStandar(ene, b0, b1, NumerosX, NumerosY);
+      float desviacion = intervalo.desviacionStandar(ene, b0, b1, NumerosX, NumerosY);
       //Variable que guarda el valor del promedio del vector x
-      float averageX = calcux.promX(NumerosX);
+      float averageX = intervalo.promX(NumerosX);
       //Variable que guarda el valor del rango del intervalo
-      float rango = calcux.rango(distT, desviacion, ene, xK, averageX, NumerosX);
+      float rango = intervalo.rango(distT, desviacion, ene, xK, averageX, NumerosX);
       //Variable que guarda el valor del limite superior
-      float rangoUP = calcux.rangoUP(yk, rango);
+      float rangoUP = intervalo.rangoUP(yk, rango);
       //Variable que guarda el valor del limite inferior
-      float rangoLP = calcux.rangoLP(yk, rango);
+      float rangoLP = intervalo.rangoLP(yk, rango);
       //Se manda a imprimir los valores calculados
-      imp.vacioArchivo(vacioArch, N, xK, corre, correa2, b0, b1, yk, signi, rango, rangoUP, rangoLP);
+      imp.vacioArchivo(vacioArch, N, xK, corre, correa2, b0, b1, yk, significancia, rango, rangoUP, rangoLP);
 
 
     system("pause");
