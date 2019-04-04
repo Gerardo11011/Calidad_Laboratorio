@@ -23,6 +23,7 @@ extern bool vacioArch;
 //.b=33
 //.d=2
 
+//.i
 int main() {
   string nombreArchivo;
   cout << "Introduzca el nombre del archivo a leer: ";
@@ -37,12 +38,16 @@ int main() {
   Imprimir imp;
   Rango intervalo;
   if(lector.existeArchivo()){
+    //Se cuentan cuantos X y Y hay (Numeros)
     lector.Contar(NumerosX,NumerosY);
+    //Calcula la correlacion
     calcu.Correlacion(NumerosX, NumerosY, lector.getTotales());
+    //Calcula la Regresion
     calcu.Regresion(NumerosX, NumerosY, lector.getTotales());
     N = lector.getTotales();//.m
     xK = lector.getxK(); //.m
     corre = calcu.getcorrelation(); //.m
+    //Correlacion al cuadrado
     correa2 = corre * corre;//.m
     b0 = calcu.getB0();//.m
     b1 = calcu.getB1();//.m
@@ -52,10 +57,8 @@ int main() {
     imp.imprimeNoexiste(); //.m
   }
 
+  /////////////////////////////////////////////////////
 
-
-
-  ///////////////////
   //.b=50
   //.d=27
   float x = signi.CalculaX(corre,correa2, N);
@@ -77,17 +80,13 @@ int main() {
     num_seg = num_seg*2;
     num_seg2 = num_seg*2;
   }while (abs(aux) > errorp);
-
   significancia = signi.calcuSigni(p);
 
-
-  //////////////////////////////////////////
-
-
-  p1 = calcuP.calculaValor(x,dof,num_seg);
+  /////////////////////////////////////////////////////
 
   //.b=54
   //.d=22
+  p1 = calcuP.calculaValor(x,dof,num_seg);
   float errorT = 0.000000000001, difp = 1.00000;
   float pt = 0.35, d = x / 2, p2 = 0.00000;
   bool dire1 = false, dire2 = false;
@@ -123,7 +122,7 @@ int main() {
     imp.imprimeErrorpDof();//.m
   }
 
-  //////////////////////////////////////////
+  /////////////////////////////////////////////////////
   float distT = x;
   float ene = N;
 
