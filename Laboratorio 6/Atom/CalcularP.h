@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////
-///Problema 4                                   ///
+///Problema 6                                   ///
 ///Autor: Gerardo Aldair Ponce Gomez A00818934  ///
 ///////////////////////////////////////////////////
 #ifndef CALCULARP_H
@@ -11,7 +11,6 @@
 #include <cmath>
 //.b=45
 using namespace std;
-//.d=4
 const float pi = 3.14159265358979323846;
 
 

@@ -11,7 +11,7 @@
 #include <iomanip>
 #include <numeric>
 #include <algorithm>
-
+//.b=45
 using namespace std;
 
 class Calcular{

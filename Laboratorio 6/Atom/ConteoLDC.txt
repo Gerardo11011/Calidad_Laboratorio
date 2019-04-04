@@ -1,0 +1,14 @@
+PARTES BASE:
+main: T=88, I=0, B=137, D=51, M=10, A=2
+CalcularP: T=55, I=2, B=45, D=0, M=1, A=10
+Imprimir: T=40, I=4, B=30, D=0, M=3, A=10
+-------------------------------------------
+PARTES NUEVAS:
+Rango: T=59, I=5
+Significancia: T=21, I=2
+-------------------------------------------
+PARTES REUSADAS:
+Calcular: T=45, I=8, B=45
+Lectora: T=65, I=6, B=65
+-------------------------------------------
+Total de LDC=373

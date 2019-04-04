@@ -1,9 +1,9 @@
-#ifndef LECTORA_H
-#define LECTORA_H
 ///////////////////////////////////////////////////
-///Problema 3                                   ///
+///Problema 6                                   ///
 ///Autor: Gerardo Aldair Ponce Gomez A00818934  ///
 ///////////////////////////////////////////////////
+#ifndef LECTORA_H
+#define LECTORA_H
 #include <fstream>
 #include <algorithm>
 #include <cctype>
@@ -12,11 +12,9 @@
 #include <vector>
 #include <string>
 using namespace std;
-//.b=74
-//.d=36
+//.b=65
 
-bool vacioArch = false; //.m
-
+bool vacioArch = false;
 class Lectora {
     private:
       fstream archivo;
@@ -29,9 +27,9 @@ class Lectora {
       //Constructor
       Lectora (string nombre){
         archivo.open(nombre.c_str());
-        xK = 0; //.m
-        renglon = 0; //.m
-        totales = 0; //.m
+        xK = 0;
+        renglon = 0;
+        totales = 0;
       }
       //.i
       //Destructor
@@ -41,12 +39,12 @@ class Lectora {
       //.i
       //Funcion que obtiene el valor de xK
       int getxK(){
-        return xK; //.m
+        return xK;
       }
       //.i
       //Funcion que obtiene el valor de la cantidad de datos ingresados
       int getTotales(){
-        return totales; //.m
+        return totales;
       }
       //.i
       //Funcion que comprueba si existe el archivo

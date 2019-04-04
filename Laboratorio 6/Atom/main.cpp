@@ -19,6 +19,9 @@ vector<float>NumerosX;
 vector<float>NumerosY;
 extern bool vacioArch;
 
+//.b=33
+//.d=2
+
 int main() {
   string nombreArchivo;
   cout << "Introduzca el nombre del archivo a leer: ";
@@ -50,18 +53,17 @@ int main() {
 
 
   ///////////////////
+  //.b=50
+  //.d=27
   float x = signi.CalculaX(corre,correa2, N);
   float dof = N-2;
+  dof = floor(dof);
   //gamma1, gamma2, ope y aux son auxiliares para almacenar valores|| Gamma es el valor calculado total de gamma
   float aux = 0.0000000000;
   float errorp = 0.0001, p = 0.0000000000, p1 = 0.00000;
   //num_seg son el total de iteraciones que se realizaran para el calculo de los valores f(x)
-  float num_seg = 300.0000000000, num_seg2 = 2*num_seg;
+  float num_seg = 300.0000000000, num_seg2 = 2*num_seg; //.m
   CalcularP calcuP;
-
-
-
-
   //almacena el valor para comprobar el grado de error
   float significancia;
   //ciclo que vuelve a calcular los valores de p y los comprueba hasta que se obtenga el grado de error deseado
@@ -81,39 +83,44 @@ int main() {
 
   p1 = calcuP.calculaValor(x,dof,num_seg);
 
+  //.b=54
+  //.d=22
   float errorT = 0.000000000001, difp = 1.00000;
-
   float pt = 0.35, d = x / 2, p2 = 0.00000;
   bool dire1 = false, dire2 = false;
   x = 1.00000;
 
+  if (pt >=  0 && pt <= 0.5 && dof > 0) {
+    //ciclo que vuelve a calcular los valores de p y los comprueba hasta que se obtenga el grado de error deseado
+    while (abs(difp) > errorT) {
+      //Si p es menor que la p introducida se corrige los valores de x
+      if (p1 < pt) {
+        x = x + d;
+        p2 = calcuP.calculaValor(x,dof,num_seg);
+        dire2 = true;
+      }
+      else{
+        x = x - d;
+        p2 = calcuP.calculaValor(x,dof,num_seg);
+        dire2 = false;
+      }
+      //Se calcula el error de p
+      difp = p2-p1;
+      //Se guarda el nuevo valor de p
+      p1 = p2;
+      //If que comprueba si hubo cambio de direccion
+      if (dire1 != dire2) {
+        d = d / 2;
+      }
+      //Se le asigna la misma direccion por si cambia de direccion
+      dire1 = dire2;
+      }
+  }
+  else {
+    imp.imprimeErrorpDof();//.m
+  }
 
-  //ciclo que vuelve a calcular los valores de p y los comprueba hasta que se obtenga el grado de error deseado
-  while (abs(difp) > errorT) {
-    //Si p es menor que la p introducida se corrige los valores de x
-    if (p1 < pt) {
-      x = x + d;
-      p2 = calcuP.calculaValor(x,dof,num_seg);
-      dire2 = true;
-    }
-    else{
-      x = x - d;
-      p2 = calcuP.calculaValor(x,dof,num_seg);
-      dire2 = false;
-    }
-    //Se calcula el error de p
-    difp = p2-p1;
-    //Se guarda el nuevo valor de p
-    p1 = p2;
-    //If que comprueba si hubo cambio de direccion
-    if (dire1 != dire2) {
-      d = d / 2;
-    }
-    //Se le asigna la misma direccion por si cambia de direccion
-    dire1 = dire2;
-    }
-
-
+  //////////////////////////////////////////
   float distT = x;
   float ene = N;
 

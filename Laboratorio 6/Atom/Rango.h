@@ -1,3 +1,7 @@
+///////////////////////////////////////////////////
+///Problema 6                                   ///
+///Autor: Gerardo Aldair Ponce Gomez A00818934  ///
+///////////////////////////////////////////////////
 #ifndef RANGO_H
 #define RANGO_H
 #include <iostream>
@@ -12,6 +16,7 @@ class Rango {
     public:
 
       ///Funcion que calcula la desviacion estandar
+      //.i
       float desviacionStandar(float N, float b0, float b1, vector <float> &NumX,vector <float> &NumY){
         float acum = 0.00000, aux = 0.00000;
         for (int i = 0; i < N; i++) {
@@ -26,6 +31,7 @@ class Rango {
       }
 
       //Funcion que calcula el promedio del vector
+      //.i
       float promX(vector <float> &NumX){
         float acum = 0.00000;
         float tamano = NumX.size();
@@ -37,6 +43,7 @@ class Rango {
         return average;
       }
 
+      //.i
       //Funcion que calcula el rango de un intervalo
       float rango(float distT, float desviacion, float N, float xk, float aveX, vector <float> &NumX){
         float tamano = NumX.size();
@@ -58,6 +65,7 @@ class Rango {
         return result;
       }
 
+      //.i
       //Funcion que calcula el Limite superior
       float rangoUP(float yk, float rango){
         float result = 0.00000;
@@ -65,6 +73,7 @@ class Rango {
         return result;
       }
 
+      //.i
       //Funcion que calcula el Limite Inferior
       float rangoLP(float yk, float rango){
         float result = 0.00000;

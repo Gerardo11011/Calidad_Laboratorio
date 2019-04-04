@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////
-///Problema 3                                   ///
+///Problema 6                                   ///
 ///Autor: Gerardo Aldair Ponce Gomez A00818934  ///
 ///////////////////////////////////////////////////
 #ifndef IMPRIMIR_H
@@ -9,8 +9,7 @@
 #include <iomanip>
 using namespace std;
 
-//.b=42
-//.d=31
+//.b=30
 
 class Imprimir {
     private:
@@ -25,17 +24,17 @@ class Imprimir {
     public:
       //.i
       //Funcion que imprime si el archivo esta vacio o manda a imprimir los resultados
-      void vacioArchivo(bool vacio, int N, int K, float R, float RR, float  B0, float B1, float YK, float signi, float rango, float LS, float LI) {
+      void vacioArchivo(bool vacio, int N, int K, float R, float RR, float  B0, float B1, float YK, float signi, float rango, float LS, float LI) { //.m
         if (vacio == true) {
           cout << "El archivo esta vacio" << endl;
         }
         else {
-          imprimeResultados(N, K, R, RR, B0, B1, YK, signi, rango, LS, LI);
+          imprimeResultados(N, K, R, RR, B0, B1, YK, signi, rango, LS, LI); //.m
         }
       }
       //.i
       //Funcion que imprime los resultados
-      void imprimeResultados(int N, float K, float R, float RR, float  B0, float B1, float YK, float signi, float rango, float LS, float LI) {
+      void imprimeResultados(int N, float K, float R, float RR, float  B0, float B1, float YK, float signi, float rango, float LS, float LI) { //.m
         cout << setprecision(5) << fixed;
         cout << "N = " << N << endl;
         cout << "xk = " << K << endl;
@@ -52,8 +51,14 @@ class Imprimir {
         cout << "LI = " << LI << endl;
       }
 
+      //.i
       void imprimeNoexiste() {
         cout << "El archivo no existe" << endl;
+      }
+
+      //.i
+      void imprimeErrorpDof() {
+        cout << "ERROR valores invalidos" << endl;
       }
 
 };

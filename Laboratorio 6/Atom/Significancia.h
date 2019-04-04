@@ -1,3 +1,7 @@
+///////////////////////////////////////////////////
+///Problema 6                                   ///
+///Autor: Gerardo Aldair Ponce Gomez A00818934  ///
+///////////////////////////////////////////////////
 #ifndef SIGNIFICANCIA_H
 #define SIGNIFICANCIA_H
 #include <iostream>
@@ -10,6 +14,7 @@ using namespace std;
 
 class Significancia {
     public:
+      //.i
       //Funcion que calcula el valor de x para comenzar a calcular la significancia
       float CalculaX(float corre, float correa2, float n){
         float auxNum = sqrt(n-2);
@@ -18,6 +23,7 @@ class Significancia {
         return x;
       }
 
+      //.i
       //Funcion que calcula la significancia
       float calcuSigni(float p){
         float signi = 0.00000;
