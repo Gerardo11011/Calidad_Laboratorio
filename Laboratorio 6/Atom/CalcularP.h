@@ -35,12 +35,23 @@ public:
   }
   //.i
   //Funcion que calcula el valor de la distribucion y obtiene el valor de la integral por el metodo de simpsons
-  float calculaValor(float x, int dof, float num_seg, float gamma){
+  float calculaValor(float x, float dof, float num_seg){
     float xi = 0.0000000000;
     float W = x/num_seg;
-    float step1 = 0.0000000000, step2 = 0.0000000000, aux = 0.0000000000;
+    float step1 = 0.0000000000, step2 = 0.0000000000, aux = 100.0000000000;
     float fx = 0.0000000000;
     vector <float> myVector;
+    float gamma = 0.0000000000, ope = 0.0000000000;
+    float gamma1 = 0.0000000000, gamma2 = 0.0000000000;
+
+    //Se calcula gamma
+    ope = (dof+1)/2;
+    gamma1 = calculaGamma(ope);
+    ope = dof/2;
+    gamma2 = calculaGamma(ope);
+    aux = pow((dof * pi),0.5);
+    //Se almacena el valor total de gamma
+    gamma = gamma1 / (aux * gamma2);
 
     //Ciclo for que calcula el valor de todos los f(x)
     for (float i = 0.0000000000; i <= num_seg; i++) {
