@@ -1,7 +1,7 @@
 PARTES BASE:
-main: T=93, I=2, B=137, D=51, M=10, A=7
+main: T=93, I=2, B=137, D=57, M=10, A=13
 CalcularP: T=52, I=2, B=45, D=2, M=0, A=9
-Imprimir: T=29, I=4, B=30, D=8, M=1, A=7
+Imprimir: T=29, I=4, B=30, D=10, M=1, A=9
 Lectora: T=80, I=8, B=65, D=0, M=1, A=15
 -------------------------------------------
 PARTES NUEVAS:

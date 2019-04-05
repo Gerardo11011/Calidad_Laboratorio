@@ -12,7 +12,7 @@ using namespace std;
 //.b=30
 
 class Imprimir {
-    //.d=8
+    //.d=10
 
     public:
 

@@ -98,7 +98,7 @@ int main() {
   //////////////////////////////////////////////
 
   //.b=54
-  //.d=22
+  //.d=28
   p1 = calcuP.calculaValor(x,dof,num_seg);
   float errorT = 0.000000000001, difp = 1.00000;
   float pt = 0.35, d = x / 2, p2 = 0.00000;

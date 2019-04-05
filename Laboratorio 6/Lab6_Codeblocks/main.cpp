@@ -98,7 +98,7 @@ int main() {
   //////////////////////////////////////////////
 
   //.b=54
-  //.d=22
+  //.d=28
   p1 = calcuP.calculaValor(x,dof,num_seg);
   float errorT = 0.000000000001, difp = 1.00000;
   float pt = 0.35, d = x / 2, p2 = 0.00000;
@@ -163,10 +163,6 @@ int main() {
   if (vacioArch == 0) {
     imp.imprimeResultados(N, xK, corre, correa2, b0, b1, yk, significancia, rango, rangoUP, rangoLP);
   }
-
-
-
-
   system("pause");
   return 0;
 }
