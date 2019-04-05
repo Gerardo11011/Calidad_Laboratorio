@@ -30,8 +30,6 @@ class Significancia {
         signi = 1 - 2 * p;
         return signi;
       }
-
-
 };
 
 #endif

@@ -18,12 +18,17 @@
 using namespace std;
 
 
-extern bool vacioArch;
+extern int vacioArch;
 
 //.b=33
 //.d=2
 
 //.i
+
+////////////////////////////////////////////////////
+///Seccion que calcula el valor de la correlacion///
+///y valores beta, xk y yk                       ///
+////////////////////////////////////////////////////
 int main() {
   string nombreArchivo;
   cout << "Introduzca el nombre del archivo a leer: ";
@@ -57,14 +62,19 @@ int main() {
     imp.imprimeNoexiste(); //.m
   }
 
-  /////////////////////////////////////////////////////
+  //cout << "Vacio: " << vacioArch << endl;
+
+  //////////////////////////////////////////////
+  ///Seccion que calcula el valor de P con la///
+  ///X calculada en la significancia         ///
+  //////////////////////////////////////////////
 
   //.b=50
   //.d=27
   float x = signi.CalculaX(corre,correa2, N);
   float dof = N-2;
   dof = floor(dof);
-  //gamma1, gamma2, ope y aux son auxiliares para almacenar valores|| Gamma es el valor calculado total de gamma
+  //aux son auxiliares para almacenar valores
   float aux = 0.0000000000;
   float errorp = 0.0001, p = 0.0000000000, p1 = 0.00000;
   //num_seg son el total de iteraciones que se realizaran para el calculo de los valores f(x)
@@ -82,7 +92,10 @@ int main() {
   }while (abs(aux) > errorp);
   significancia = signi.calcuSigni(p);
 
-  /////////////////////////////////////////////////////
+  //////////////////////////////////////////////
+  ///Seccion que calcula el valor de x con un///
+  ///un valor de p de 0.35                   ///
+  //////////////////////////////////////////////
 
   //.b=54
   //.d=22
@@ -123,6 +136,10 @@ int main() {
   }
 
   /////////////////////////////////////////////////////
+  ///Seccion que calcula el valor de los rangos     ///
+  ///desviacion estandar, limite inferior y superior///
+  /////////////////////////////////////////////////////
+
   float distT = x;
   float ene = N;
 
@@ -133,13 +150,19 @@ int main() {
   //Variable que guarda el valor del rango del intervalo
   float rango = intervalo.rango(distT, desviacion, ene, xK, averageX, NumerosX);
   //Variable que guarda el valor del limite superior
-  float rangoUP = intervalo.rangoUP(yk, rango);
+  float rangoUP = intervalo.rangoLS(yk, rango);
   //Variable que guarda el valor del limite inferior
-  float rangoLP = intervalo.rangoLP(yk, rango);
-  //Se manda a imprimir los valores calculados
-  imp.vacioArchivo(vacioArch, N, xK, corre, correa2, b0, b1, yk, significancia, rango, rangoUP, rangoLP);
-
-
-  system("pause");
+  float rangoLP = intervalo.rangoLI(yk, rango);
+  //Se verifica que los datos sean todos mayores o iguales que 0
+  if (lector.error0() == 1) {
+    imp.imprimeMayor0();
+    system("pause");
     return 0;
+  }
+  //Se manda a imprimir los valores calculados
+  if (vacioArch == 0) {
+    imp.imprimeResultados(N, xK, corre, correa2, b0, b1, yk, significancia, rango, rangoUP, rangoLP);
+  }
+  system("pause");
+  return 0;
 }

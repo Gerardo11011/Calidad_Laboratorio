@@ -11,16 +11,18 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include "Imprimir.h"
 using namespace std;
 //.b=65
 
-bool vacioArch = false;
+int vacioArch = 0;
 class Lectora {
     private:
       fstream archivo;
       float xK;
       int renglon;
       int totales;
+      int error;
 
     public:
       //.i
@@ -58,7 +60,21 @@ class Lectora {
       }
 
       //.i
-      //Funcion que cuenta y lee los datos del archivo y los almacenas
+      //Funcion que imprime si el archivo esta vacio o manda a imprimir los resultados
+      void vacioArchivo() { //.m
+        cout << endl;
+        cout << "El archivo esta vacio" << endl << endl;
+        system("pause");
+      }
+
+      //.i
+      //Funcion que retorna el valor del error
+      int error0(){
+        return error;
+      }
+
+      //.i
+      //Funcion que cuenta y lee los datos del archivo y los almacena
       void Contar(vector<float>&NumX,vector<float>&NumY){
         string linea;
         string X;
@@ -68,16 +84,20 @@ class Lectora {
         while(! archivo.eof()){
             getline(archivo,linea);
             //IF que verifica que el archivo no este vacio
-            if (linea[0] == '\0' && vacio == false && primeralinea == 0) {
-              vacio = true;
+            if (linea[0] == '\0' && vacio == 0 && primeralinea == 0) {
+              vacio = 1;
               primeralinea++;
               vacioArch = true;
+              vacioArchivo();
             }
             primeralinea++;
-            //almacena el dato del primer renglon unciamente
+            //almacena el dato del primer renglon unicamente
             if(renglon == 0){
                 xK = atoi(linea.c_str());
                 renglon++;
+                if (xK < 0) {
+                  error = 1;
+                }
             }
             //Lee el resto de las lineas y almacena los valores que estan en el archivo
             else if(renglon > 0 && linea.size() > 1){
@@ -87,11 +107,17 @@ class Lectora {
                 float aux;
                 ss >> aux;
                 ss.clear();
+                if (aux < 0) {
+                  error = 1;
+                }
                 NumX.push_back(aux);
                 Y = linea.substr(linea.find(',')+1);
                 ss << Y;
                 ss >> aux;
                 ss.clear();
+                if (aux < 0) {
+                  error = 1;
+                }
                 NumY.push_back(aux);
                 totales++;
             }

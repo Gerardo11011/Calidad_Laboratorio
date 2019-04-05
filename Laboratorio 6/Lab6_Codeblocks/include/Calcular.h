@@ -65,7 +65,7 @@ public:
         }
     }
     //.i
-    //Funcion que realza el calcula el calculo de la correlacion
+    //Funcion que realiza el calcula el calculo de la correlacion
     void Correlacion(vector<float>&NumX,vector<float>&NumY, int iN){
         Sumatorias(NumX, NumY,iN);
         Correlation =((iN * XY - X * Y) / (sqrt(iN * XX - X * X) * sqrt(iN * YY -Y * Y)));

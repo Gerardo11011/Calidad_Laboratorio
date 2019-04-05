@@ -67,7 +67,7 @@ class Rango {
 
       //.i
       //Funcion que calcula el Limite superior
-      float rangoUP(float yk, float rango){
+      float rangoLS(float yk, float rango){
         float result = 0.00000;
         result = yk + rango;
         return result;
@@ -75,7 +75,7 @@ class Rango {
 
       //.i
       //Funcion que calcula el Limite Inferior
-      float rangoLP(float yk, float rango){
+      float rangoLI(float yk, float rango){
         float result = 0.00000;
         result = yk - rango;
         if (result > 0) {

@@ -12,26 +12,10 @@ using namespace std;
 //.b=30
 
 class Imprimir {
-    private:
-      int conta = 0;
-      int xK = 0;
-      float r = 0.0;
-      float rr = 0.0;
-      float b0 = 0.0;
-      float b1 = 0.0;
-      float yk = 0.0;
+    //.d=8
 
     public:
-      //.i
-      //Funcion que imprime si el archivo esta vacio o manda a imprimir los resultados
-      void vacioArchivo(bool vacio, int N, int K, float R, float RR, float  B0, float B1, float YK, float signi, float rango, float LS, float LI) { //.m
-        if (vacio == true) {
-          cout << "El archivo esta vacio" << endl;
-        }
-        else {
-          imprimeResultados(N, K, R, RR, B0, B1, YK, signi, rango, LS, LI); //.m
-        }
-      }
+
       //.i
       //Funcion que imprime los resultados
       void imprimeResultados(int N, float K, float R, float RR, float  B0, float B1, float YK, float signi, float rango, float LS, float LI) { //.m
@@ -52,13 +36,21 @@ class Imprimir {
       }
 
       //.i
+      //Funcion que imprime el mensaje de archivo inexistente
       void imprimeNoexiste() {
-        cout << "El archivo no existe" << endl << endl;
+        cout << "\nEl archivo no existe" << endl << endl;
       }
 
       //.i
+      //Funcion que imprime mensaje de datos invalidos
       void imprimeErrorpDof() {
-        cout << "ERROR valores invalidos" << endl << endl;
+        cout << "\nERROR valores invalidos" << endl << endl;
+      }
+
+      //.i
+      //Funcion que imprime mensaje de error en caso de que los datos no sean mayores o iguales a 0
+      void imprimeMayor0(){
+        cout << "\nLos datos no son mayores o iguales a 0" << endl << endl;
       }
 
 };

@@ -12,12 +12,9 @@
 //.b=45
 using namespace std;
 const float pi = 3.14159265358979323846;
+//.d=2
 
-
-class CalcularP{ //.m
-private:
-  int dof;
-  float x;
+class CalcularP{
 public:
   //.i
   //Funcion que calcula el valor de gamma

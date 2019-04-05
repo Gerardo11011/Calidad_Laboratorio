@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1554402222 source:d:\codigos\calidad\laboratorio 6\lab6_codeblocks\main.cpp
+1554413402 source:d:\codigos\calidad\laboratorio 6\lab6_codeblocks\main.cpp
 	<iostream>
 	<vector>
 	<iomanip>
@@ -13,7 +13,7 @@
 	"Rango.h"
 	"Significancia.h"
 
-1554400824 d:\codigos\calidad\laboratorio 6\lab6_codeblocks\include\lectora.h
+1554413509 d:\codigos\calidad\laboratorio 6\lab6_codeblocks\include\lectora.h
 	<fstream>
 	<algorithm>
 	<cctype>
@@ -21,8 +21,9 @@
 	<iostream>
 	<vector>
 	<string>
+	"Imprimir.h"
 
-1554400824 d:\codigos\calidad\laboratorio 6\lab6_codeblocks\include\calcular.h
+1554413402 d:\codigos\calidad\laboratorio 6\lab6_codeblocks\include\calcular.h
 	<iostream>
 	<string>
 	<vector>
@@ -31,7 +32,7 @@
 	<numeric>
 	<algorithm>
 
-1554402265 d:\codigos\calidad\laboratorio 6\lab6_codeblocks\include\imprimir.h
+1554413402 d:\codigos\calidad\laboratorio 6\lab6_codeblocks\include\imprimir.h
 	<iostream>
 	<iomanip>
 
