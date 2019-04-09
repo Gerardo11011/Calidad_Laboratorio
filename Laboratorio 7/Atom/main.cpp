@@ -1,3 +1,7 @@
+///////////////////////////////////////////////////
+///Problema 7                                   ///
+///Autor: Gerardo Aldair Ponce Gomez A00818934  ///
+///////////////////////////////////////////////////
 #include <iostream>
 #include <vector>
 #include <iomanip>

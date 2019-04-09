@@ -1,3 +1,7 @@
+///////////////////////////////////////////////////
+///Problema 7                                   ///
+///Autor: Gerardo Aldair Ponce Gomez A00818934  ///
+///////////////////////////////////////////////////
 #ifndef GAUSS_H
 #define GAUSS_H
 #include <iostream>
