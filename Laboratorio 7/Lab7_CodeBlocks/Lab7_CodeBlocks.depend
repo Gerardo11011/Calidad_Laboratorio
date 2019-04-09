@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1554680248 source:d:\codigos\calidad\laboratorio 7\lab7_codeblocks\main.cpp
+	<iostream>
+	<vector>
+	<iomanip>
+	<string>
+	<stdlib.h>
+
