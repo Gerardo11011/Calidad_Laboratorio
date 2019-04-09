@@ -13,37 +13,31 @@ class Gauss {
 
   public:
     void Calcular(float &b0,float &b1, float &b2, float &b3, float &zk, float matriz[][5], float totales, float wk, float xk, float yk) {
-      //Ya tenemos todos los datos en una matriz ahora aplicamos gauss jordan para encontrar los valores de las incognitas
 
-
-      ///En este caso es i < 4 por el numero de incognitas
+      ///Ciclo que recorre la matriz por el total de incognitas
           for (int i=0; i<4; i++)
           {
-              /// Se encuentra el valor maximo y su posicion
-              float valorm = abs(matriz[i][i]);
-              int posm = i;
+              /// Se encuentra el valor maximo y la posicion del mismo
+              float maximo = abs(matriz[i][i]);
+              int maxpos = i;
               for (int k=i+1; k<4; k++)
               {
-                  if (abs(matriz[k][i]) > valorm)
+                  if (abs(matriz[k][i]) > maximo)
                   {
-                      valorm = abs(matriz[k][i]);
-                      posm = k;
+                      maximo = abs(matriz[k][i]);
+                      maxpos = k;
                   }
               }
 
-              /// Ordenamos columna por columna los valoes
+              /// Se ordena la columna
               for (int k=i; k<4+1; k++)
               {
-                  float temporal = matriz[posm][k];
-                  matriz[posm][k] = matriz[i][k];
+                  float temporal = matriz[maxpos][k];
+                  matriz[maxpos][k] = matriz[i][k];
                   matriz[i][k] = temporal;
               }
 
-              /// Igualamos a 0 de manera de escalera es decir
-              ///xxxx
-              ///0xxx
-              ///00xx
-              ///000x
+              /// Ciclo que va a igualando a 0
               for (int k=i+1; k<4; k++)
               {
                   float cero = -matriz[k][i]/matriz[i][i];
@@ -61,21 +55,7 @@ class Gauss {
               }
           }
 
-
-
-          /*
-          //Imprimir matriz para revisar valores resultados
-
-          for (int i = 0; i < 4; i++) {
-                  for (int j = 0; j <= 4; j++)
-                    cout << matriz[i][j] << " ";
-                  cout << endl;
-              }
-              */
-
-
-
-          ///Despejamos mediante los valores las incognita
+          ///Se despeja la incognita
           b3=matriz[3][4]/matriz[3][3];
           b2=((matriz[2][4]+(-matriz[2][3]*b3))/matriz[2][2]);
           b1=((matriz[1][4]+(-matriz[1][3]*b3)+(-matriz[1][2]*b2))/matriz[1][1]);

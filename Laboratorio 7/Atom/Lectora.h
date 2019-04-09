@@ -1,9 +1,10 @@
-#ifndef LECTORA_H
-#define LECTORA_H
 ///////////////////////////////////////////////////
-///Problema 3                                   ///
+///Problema 7                                   ///
 ///Autor: Gerardo Aldair Ponce Gomez A00818934  ///
 ///////////////////////////////////////////////////
+#ifndef LECTORA_H
+#define LECTORA_H
+
 #include <fstream>
 #include <algorithm>
 #include <cctype>
@@ -12,6 +13,7 @@
 #include <vector>
 #include <stdlib.h>
 #include <string>
+
 using namespace std;
 
 
@@ -24,6 +26,7 @@ class Lectora {
       float yk; //.m
       float totales;
       bool vacioArch;
+      bool numerror;
 
     public:
       //.i
@@ -35,6 +38,7 @@ class Lectora {
         yk = 0; //.m
         vacioArch = false;
         totales = 0;
+        numerror = false;
       }
       //.i
       //Destructor
@@ -58,7 +62,8 @@ class Lectora {
         return yk;
       }
 
-      bool vacioArchivo(){
+      //Funcion que comprueba si el archivo esta vacio
+      bool getVacioArchivo(){
         return vacioArch;
       }
 
@@ -74,8 +79,14 @@ class Lectora {
         }
       }
 
+      //Funcion que retorna el conteo de total de datos
       float getTotales(){
         return totales;
+      }
+
+      //Funcion que retorna el booleano de numerror
+      bool getNumerror(){
+        return numerror;
       }
 
       //.i
@@ -87,6 +98,7 @@ class Lectora {
         string X;
         string Y, Z, W;
         string auxwk, auxxk, auxyk, aux;
+        float num = 0;
         int renglon = 0;
         while(! archivo.eof()){
             getline(archivo,linea);
@@ -109,17 +121,42 @@ class Lectora {
             //Lee el resto de las lineas y almacena los valores que estan en el archivo
             else if(renglon > 0 && linea.size() > 1){
               aux = linea.substr(0,linea.find(','));
-              NumW.push_back(stof(aux.c_str()));
+              num = atof(aux.c_str());
+              //IF que comprueba que si el numero es menor a 0 y cambia el estado de numerror
+              if (num < 0) {
+                numerror = true;
+              }
+              NumW.push_back(num);
+
               linea.erase(0,linea.find(',')+1);
               aux = linea.substr(0,linea.find(','));
-              NumX.push_back(stof(aux.c_str()));
+              num = atof(aux.c_str());
+              //IF que comprueba que si el numero es menor a 0 y cambia el estado de numerror
+              if (num < 0) {
+                numerror = true;
+              }
+              NumX.push_back(num);
+
               linea.erase(0,linea.find(',')+1);
               aux = linea.substr(0,linea.find(','));
-              NumY.push_back(stof(aux.c_str()));
+              num = atof(aux.c_str());
+              //IF que comprueba que si el numero es menor a 0 y cambia el estado de numerror
+              if (num < 0) {
+                numerror = true;
+              }
+              NumY.push_back(num);
+
               linea.erase(0,linea.find(',')+1);
               aux = linea.substr(linea.find(',')+1);
-              NumZ.push_back(stof(aux.c_str()));
-                totales++;
+              num = atof(aux.c_str());
+              //IF que comprueba que si el numero es menor a 0 y cambia el estado de numerror
+              if (num < 0) {
+                numerror = true;
+              }
+              NumZ.push_back(num);
+
+              //Se cuentan el total de datos ingresados
+              totales++;
             }
         }
       }

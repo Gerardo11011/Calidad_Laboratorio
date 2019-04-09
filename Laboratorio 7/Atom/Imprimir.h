@@ -32,6 +32,18 @@ class Imprimir {
         cout << "zk = " << zk << endl;
       }
 
+      void imprimeNoexiste() {
+        cout << "\nEl archivo no existe" << endl << endl;
+      }
+
+      void imprimeMayor0(){
+        cout << "\nLos datos no son mayores o iguales a 0" << endl << endl;
+      }
+
+      void vacioArchivo() {
+        cout << "\nEl archivo esta vacio" << endl << endl;
+      }
+
       //d.9
       //.d=6
 

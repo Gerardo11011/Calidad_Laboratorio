@@ -1,5 +1,10 @@
+///////////////////////////////////////////////////
+///Problema 7                                   ///
+///Autor: Gerardo Aldair Ponce Gomez A00818934  ///
+///////////////////////////////////////////////////
 #ifndef MATRIZ_H
 #define MATRIZ_H
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -13,7 +18,7 @@ using namespace std;
 class Matriz {
 
     public:
-    void calcuRe1(vector<float>& NumW, vector<float>& NumX, vector<float>& NumY, vector<float>& NumZ, float totales, float matriz[][5]) {
+    void calcuRenglones(vector<float>& NumW, vector<float>& NumX, vector<float>& NumY, vector<float>& NumZ, float totales, float matriz[][5]) {
       //B0
       matriz[0][0] = totales;
       float aux = 0;
@@ -42,10 +47,9 @@ class Matriz {
         aux = aux + NumZ[i];
       }
       matriz[0][4] = aux;
-    }
 
-    void calcuRe2(vector<float>& NumW, vector<float>& NumX, vector<float>& NumY, vector<float>& NumZ, float totales, float matriz[][5]) {
-      float aux = 0;
+      aux = 0;
+      ///RENGLON 2
       //B0
       for (int i = 0; i < totales; i++) {
         aux = aux + NumW[i];
@@ -77,10 +81,9 @@ class Matriz {
         aux = aux + NumZ[i] * NumW[i];
       }
       matriz[1][4] = aux;
-    }
 
-    void calcuRe3(vector<float>& NumW, vector<float>& NumX, vector<float>& NumY, vector<float>& NumZ, float totales, float matriz[][5]) {
-      float aux = 0;
+      ////RENGLON 3
+      aux = 0;
       //B0
       for (int i = 0; i < totales; i++) {
         aux = aux + NumX[i];
@@ -112,10 +115,10 @@ class Matriz {
         aux = aux + NumZ[i] * NumX[i];
       }
       matriz[2][4] = aux;
-    }
 
-    void calcuRe4(vector<float>& NumW, vector<float>& NumX, vector<float>& NumY, vector<float>& NumZ, float totales, float matriz[][5]) {
-      float aux = 0;
+
+      ///RENGLON 4
+      aux = 0;
       //B0
       for (int i = 0; i < totales; i++) {
         aux = aux + NumY[i];
