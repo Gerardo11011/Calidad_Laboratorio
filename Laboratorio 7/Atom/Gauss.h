@@ -16,6 +16,7 @@ using namespace std;
 class Gauss {
 
   public:
+    //.i
     void Calcular(float &b0,float &b1, float &b2, float &b3, float &zk, float matriz[][5], float totales, float wk, float xk, float yk) {
 
       ///Ciclo que recorre la matriz por el total de incognitas

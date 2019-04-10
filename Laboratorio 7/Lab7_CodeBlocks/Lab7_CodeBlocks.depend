@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1554802386 source:d:\codigos\calidad\laboratorio 7\lab7_codeblocks\main.cpp
+1554883148 source:d:\codigos\calidad\laboratorio 7\lab7_codeblocks\main.cpp
 	<iostream>
 	<vector>
 	<iomanip>
@@ -10,7 +10,7 @@
 	"Imprimir.h"
 	"Gauss.h"
 
-1554802436 d:\codigos\calidad\laboratorio 7\lab7_codeblocks\include\lectora.h
+1554883148 d:\codigos\calidad\laboratorio 7\lab7_codeblocks\include\lectora.h
 	<fstream>
 	<algorithm>
 	<cctype>
@@ -20,7 +20,7 @@
 	<stdlib.h>
 	<string>
 
-1554802386 d:\codigos\calidad\laboratorio 7\lab7_codeblocks\include\matriz.h
+1554883148 d:\codigos\calidad\laboratorio 7\lab7_codeblocks\include\matriz.h
 	<iostream>
 	<string>
 	<vector>
@@ -29,11 +29,11 @@
 	<numeric>
 	<algorithm>
 
-1554802386 d:\codigos\calidad\laboratorio 7\lab7_codeblocks\include\imprimir.h
+1554883148 d:\codigos\calidad\laboratorio 7\lab7_codeblocks\include\imprimir.h
 	<iostream>
 	<iomanip>
 
-1554802386 d:\codigos\calidad\laboratorio 7\lab7_codeblocks\include\gauss.h
+1554883148 d:\codigos\calidad\laboratorio 7\lab7_codeblocks\include\gauss.h
 	<iostream>
 	<string>
 	<vector>

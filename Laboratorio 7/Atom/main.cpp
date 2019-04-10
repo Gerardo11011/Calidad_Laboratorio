@@ -14,6 +14,7 @@
 
 using namespace std;
 
+//.i
 int main(int argc, char const *argv[]) {
   vector<float> x;
   vector<float> y;
@@ -35,7 +36,7 @@ int main(int argc, char const *argv[]) {
       yk = lector.getyk();
       xk = lector.getxk();
       //IF que comprueba que todos los valores sean mayor o igual a 0
-      if (wk >= 0 && yk >= 0 && xk >= 0 && !lector.getNumerror()) {
+      if (!lector.getNumerror()) {
         Matriz matrix;
         Gauss gauss;
         float totales = lector.getTotales();

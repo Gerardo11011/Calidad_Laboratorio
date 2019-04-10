@@ -18,6 +18,7 @@ using namespace std;
 class Matriz {
 
     public:
+      //.i
     void calcuRenglones(vector<float>& NumW, vector<float>& NumX, vector<float>& NumY, vector<float>& NumZ, float totales, float matriz[][5]) {
       ////////RENGLON 1////////
       //B0
@@ -83,7 +84,7 @@ class Matriz {
 
       matriz[1][3] = aux;
       aux = 0;
-      
+
       //B4
       for (int i = 0; i < totales; i++) {
         aux = aux + NumZ[i] * NumW[i];

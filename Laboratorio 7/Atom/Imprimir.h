@@ -9,7 +9,7 @@
 #include <iomanip>
 using namespace std;
 
-//.b=30
+//.b=29
 
 class Imprimir {
 
@@ -32,19 +32,25 @@ class Imprimir {
         cout << "zk = " << zk << endl;
       }
 
+      //.i
+      //Funcion que imprime mensaje de no existe archivo
       void imprimeNoexiste() {
         cout << "\nEl archivo no existe" << endl << endl;
       }
 
+      //.i
+      //Funcion que imprime que los numeros son mayor a 0
       void imprimeMayor0(){
         cout << "\nLos datos no son mayores o iguales a 0" << endl << endl;
       }
 
+      //.i
+      //Funcion que imprime mensaje de archivo vacio
       void vacioArchivo() {
         cout << "\nEl archivo esta vacio" << endl << endl;
       }
 
-      //d.9
+      //.d=9
       //.d=6
 
 };
