@@ -27,7 +27,7 @@ int main(int argc, char const *argv[]) {
   cin >> nombreArchivo;
   Lectora lector (nombreArchivo);
   Imprimir imprime;
-  //IF que comprueba que el archivo esta vacio
+  //IF que comprueba si el archivo ingresado existe
   if (lector.existeArchivo()){
     lector.Contar(x,y,z,w);
     //IF que comprueva que si el archivo esta vacio
