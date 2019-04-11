@@ -2,6 +2,7 @@
 ///Problema 7                                   ///
 ///Autor: Gerardo Aldair Ponce Gomez A00818934  ///
 ///////////////////////////////////////////////////
+
 #ifndef LECTORA_H
 #define LECTORA_H
 
