@@ -61,7 +61,7 @@ int main(int argc, char const *argv[]) {
       Imprime.vacioArchivo();
     }
   }
-  //Se imprime mensaje de que el archvio no existe
+  //Se imprime mensaje de que el archivo no existe
   else {
     Imprime.imprimeNoexiste();
   }
