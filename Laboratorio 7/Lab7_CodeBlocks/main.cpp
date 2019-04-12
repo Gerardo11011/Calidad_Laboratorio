@@ -2,6 +2,9 @@
 ///Problema 7                                   ///
 ///Autor: Gerardo Aldair Ponce Gomez A00818934  ///
 ///////////////////////////////////////////////////
+
+//Programa que calcula los diferentes parametros de regresion multiple Y una prediccion mejorada zk
+
 #include <iostream>
 #include <vector>
 #include <iomanip>
@@ -14,52 +17,53 @@
 
 using namespace std;
 
+//.i
 int main(int argc, char const *argv[]) {
-  vector<float> x;
-  vector<float> y;
-  vector<float> z;
-  vector<float> w;
-  string nombreArchivo;
-  float b0 = 0, b1 = 0, b2 = 0, b3 = 0 , zk = 0;
-  float wk, yk, xk;
+  vector<float> X;
+  vector<float> Y;
+  vector<float> Z;
+  vector<float> W;
+  string NombreArchivo;
+  float B0 = 0, B1 = 0, B2 = 0, B3 = 0 , Zk = 0;
+  float Wk, Yk, Xk;
   cout << "Introduzca el nombre del archivo a leer: ";
-  cin >> nombreArchivo;
-  Lectora lector (nombreArchivo);
-  Imprimir imprime;
-  //IF que comprueba que el archivo esta vacio
-  if (lector.existeArchivo()){
-    lector.Contar(x,y,z,w);
+  cin >> NombreArchivo;
+  Lectora Lector (NombreArchivo);
+  Imprimir Imprime;
+  //IF que comprueba si el archivo ingresado existe
+  if (Lector.existeArchivo()){
+    Lector.Contar(X,Y,Z,W);
     //IF que comprueva que si el archivo esta vacio
-    if (!lector.getVacioArchivo()) {
-      wk = lector.getwk();
-      yk = lector.getyk();
-      xk = lector.getxk();
+    if (!Lector.getVacioArchivo()) {
+      Wk = Lector.getwk();
+      Yk = Lector.getyk();
+      Xk = Lector.getxk();
       //IF que comprueba que todos los valores sean mayor o igual a 0
-      if (wk >= 0 && yk >= 0 && xk >= 0 && !lector.getNumerror()) {
+      if (!Lector.getNumerror()) {
         Matriz matrix;
         Gauss gauss;
-        float totales = lector.getTotales();
+        float totales = Lector.getTotales();
         float matriz[4][5] = {0};
         //Se calcula la matriz
-        matrix.calcuRenglones(w,x,y,z, totales, matriz);
+        matrix.calcuRenglones(W,X,Y,Z, totales, matriz);
         //Se aplica el metodo de gauss para resolver la matriz
-        gauss.Calcular(b0,b1,b2,b3, zk, matriz, totales, wk, xk, yk);
+        gauss.Calcular(B0,B1,B2,B3, Zk, matriz, totales, Wk, Xk, Yk);
         //Se imprime los resultados
-        imprime.imprimeResultados(totales, wk, xk, yk, b0, b1, b2, b3, zk);
+        Imprime.imprimeResultados(totales, Wk, Xk, Yk, B0, B1, B2, B3, Zk);
       }
       //Se imprime mensaje de error en caso de que los numeros no sean mayores o iguales a 0
       else {
-        imprime.imprimeMayor0();
+        Imprime.imprimeMayor0();
       }
     }
     //Se imprime el mensaje de que el archivo esta vacio
     else {
-      imprime.vacioArchivo();
+      Imprime.vacioArchivo();
     }
   }
   //Se imprime mensaje de que el archvio no existe
   else {
-    imprime.imprimeNoexiste();
+    Imprime.imprimeNoexiste();
   }
 
   system("pause");

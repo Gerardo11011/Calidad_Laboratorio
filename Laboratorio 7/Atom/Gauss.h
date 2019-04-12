@@ -17,48 +17,48 @@ class Gauss {
 
   public:
     //.i
-    void Calcular(float &b0,float &b1, float &b2, float &b3, float &zk, float matriz[][5], float totales, float wk, float xk, float yk) {
+    void Calcular(float &B0,float &B1, float &B2, float &B3, float &Zk, float Matriz[][5], float Totales, float Wk, float Xk, float Yk) {
 
-      ///Ciclo que recorre la matriz por el total de incognitas
+      ///Ciclo que recorre la Matriz por el total de incognitas
       for (int i=0; i<4; i++){
-        /// Se encuentra el valor maximo y la posicion del mismo
-        float maximo = abs(matriz[i][i]);
-        int maxpos = i;
+        /// Se encuentra el valor Maximo y la posicion del mismo
+        float Maximo = abs(Matriz[i][i]);
+        int Maxpos = i;
         for (int k=i+1; k<4; k++){
-          if (abs(matriz[k][i]) > maximo){
-            maximo = abs(matriz[k][i]);
-            maxpos = k;
+          if (abs(Matriz[k][i]) > Maximo){
+            Maximo = abs(Matriz[k][i]);
+            Maxpos = k;
           }
         }
 
         /// Se ordena la columna
         for (int k=i; k<4+1; k++){
-          float temporal = matriz[maxpos][k];
-          matriz[maxpos][k] = matriz[i][k];
-          matriz[i][k] = temporal;
+          float Temporal = Matriz[Maxpos][k];
+          Matriz[Maxpos][k] = Matriz[i][k];
+          Matriz[i][k] = Temporal;
         }
 
         /// Ciclo que va a igualando a 0
         for (int k=i+1; k<4; k++){
-          float cero = -matriz[k][i]/matriz[i][i];
+          float Cero = -Matriz[k][i]/Matriz[i][i];
           for (int j=i; j<4+1; j++){
             if (i==j){
-              matriz[k][j] = 0;
+              Matriz[k][j] = 0;
             }
             else{
-              matriz[k][j] += cero * matriz[i][j];
+              Matriz[k][j] += Cero * Matriz[i][j];
             }
           }
         }
       }
 
       ///Se despeja la incognita
-      b3=matriz[3][4]/matriz[3][3];
-      b2=((matriz[2][4]+(-matriz[2][3]*b3))/matriz[2][2]);
-      b1=((matriz[1][4]+(-matriz[1][3]*b3)+(-matriz[1][2]*b2))/matriz[1][1]);
-      b0=((matriz[0][4]+(-matriz[0][3]*b3)+(-matriz[0][2]*b2)+(-matriz[0][1]*b1))/matriz[0][0]);
+      B3=Matriz[3][4]/Matriz[3][3];
+      B2=((Matriz[2][4]+(-Matriz[2][3]*B3))/Matriz[2][2]);
+      B1=((Matriz[1][4]+(-Matriz[1][3]*B3)+(-Matriz[1][2]*B2))/Matriz[1][1]);
+      B0=((Matriz[0][4]+(-Matriz[0][3]*B3)+(-Matriz[0][2]*B2)+(-Matriz[0][1]*B1))/Matriz[0][0]);
 
-      zk = b0+b1*wk+b2*xk+b3*yk;
+      Zk = B0+B1*Wk+B2*Xk+B3*Yk;
     }
 };
 

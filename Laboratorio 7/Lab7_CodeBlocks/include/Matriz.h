@@ -18,154 +18,155 @@ using namespace std;
 class Matriz {
 
     public:
-    void calcuRenglones(vector<float>& NumW, vector<float>& NumX, vector<float>& NumY, vector<float>& NumZ, float totales, float matriz[][5]) {
+      //.i
+    void calcuRenglones(vector<float>& NumW, vector<float>& NumX, vector<float>& NumY, vector<float>& NumZ, float totales, float Matriz[][5]) {
       ////////RENGLON 1////////
       //B0
-      matriz[0][0] = totales;
-      float aux = 0;
+      Matriz[0][0] = totales;
+      float Aux = 0;
       //B1
       for (int i = 0; i < totales; i++) {
-        aux = aux + NumW[i];
+        Aux = Aux + NumW[i];
       }
 
-      matriz[0][1] = aux;
-      aux = 0;
+      Matriz[0][1] = Aux;
+      Aux = 0;
 
       //B2
       for (int i = 0; i < totales; i++) {
-        aux = aux + NumX[i];
+        Aux = Aux + NumX[i];
       }
-      matriz[0][2] = aux;
-      aux = 0;
+      Matriz[0][2] = Aux;
+      Aux = 0;
 
       //B3
       for (int i = 0; i < totales; i++) {
-        aux = aux + NumY[i];
+        Aux = Aux + NumY[i];
       }
-      matriz[0][3] = aux;
-      aux = 0;
+      Matriz[0][3] = Aux;
+      Aux = 0;
 
       //B4
       for (int i = 0; i < totales; i++) {
-        aux = aux + NumZ[i];
+        Aux = Aux + NumZ[i];
       }
-      matriz[0][4] = aux;
+      Matriz[0][4] = Aux;
 
 
       ////////RENGLON 2////////
       //B0
-      aux = 0;
+      Aux = 0;
       for (int i = 0; i < totales; i++) {
-        aux = aux + NumW[i];
+        Aux = Aux + NumW[i];
       }
-      matriz[1][0] = aux;
-      aux = 0;
+      Matriz[1][0] = Aux;
+      Aux = 0;
 
       //B1
       for (int i = 0; i < totales; i++) {
-        aux = aux + pow(NumW[i],2);
+        Aux = Aux + pow(NumW[i],2);
       }
-      matriz[1][1] = aux;
-      aux = 0;
+      Matriz[1][1] = Aux;
+      Aux = 0;
 
       //B2
       for (int i = 0; i < totales; i++) {
-        aux = aux + NumX[i] * NumW[i];
+        Aux = Aux + NumX[i] * NumW[i];
       }
 
-      matriz[1][2] = aux;
-      aux = 0;
+      Matriz[1][2] = Aux;
+      Aux = 0;
 
       //B3
       for (int i = 0; i < totales; i++) {
-        aux = aux + NumY[i] * NumW[i];
+        Aux = Aux + NumY[i] * NumW[i];
       }
 
-      matriz[1][3] = aux;
-      aux = 0;
+      Matriz[1][3] = Aux;
+      Aux = 0;
 
       //B4
       for (int i = 0; i < totales; i++) {
-        aux = aux + NumZ[i] * NumW[i];
+        Aux = Aux + NumZ[i] * NumW[i];
       }
-      matriz[1][4] = aux;
+      Matriz[1][4] = Aux;
 
       ////////RENGLON 3////////
       //B0
-      aux = 0;
+      Aux = 0;
       for (int i = 0; i < totales; i++) {
-        aux = aux + NumX[i];
+        Aux = Aux + NumX[i];
       }
-      matriz[2][0] = aux;
-      aux = 0;
+      Matriz[2][0] = Aux;
+      Aux = 0;
 
       //B1
       for (int i = 0; i < totales; i++) {
-        aux = aux + NumW[i] * NumX[i];
+        Aux = Aux + NumW[i] * NumX[i];
       }
-      matriz[2][1] = aux;
-      aux = 0;
+      Matriz[2][1] = Aux;
+      Aux = 0;
 
       //B2
       for (int i = 0; i < totales; i++) {
-        aux = aux + pow(NumX[i], 2);
+        Aux = Aux + pow(NumX[i], 2);
       }
 
-      matriz[2][2] = aux;
-      aux = 0;
+      Matriz[2][2] = Aux;
+      Aux = 0;
 
       //B3
       for (int i = 0; i < totales; i++) {
-        aux = aux + NumY[i] * NumX[i];
+        Aux = Aux + NumY[i] * NumX[i];
       }
 
-      matriz[2][3] = aux;
-      aux = 0;
+      Matriz[2][3] = Aux;
+      Aux = 0;
 
       //B4
       for (int i = 0; i < totales; i++) {
-        aux = aux + NumZ[i] * NumX[i];
+        Aux = Aux + NumZ[i] * NumX[i];
       }
-      matriz[2][4] = aux;
+      Matriz[2][4] = Aux;
 
 
       ////////RENGLON 4////////
       //B0
-      aux = 0;
+      Aux = 0;
       for (int i = 0; i < totales; i++) {
-        aux = aux + NumY[i];
+        Aux = Aux + NumY[i];
       }
-      matriz[3][0] = aux;
-      aux = 0;
+      Matriz[3][0] = Aux;
+      Aux = 0;
 
       //B1
       for (int i = 0; i < totales; i++) {
-        aux = aux + NumW[i] * NumY[i];
+        Aux = Aux + NumW[i] * NumY[i];
       }
-      matriz[3][1] = aux;
-      aux = 0;
+      Matriz[3][1] = Aux;
+      Aux = 0;
 
       //B2
       for (int i = 0; i < totales; i++) {
-        aux = aux + NumX[i] * NumY[i];
+        Aux = Aux + NumX[i] * NumY[i];
       }
 
-      matriz[3][2] = aux;
-      aux = 0;
+      Matriz[3][2] = Aux;
+      Aux = 0;
 
       //B3
       for (int i = 0; i < totales; i++) {
-        aux = aux + pow(NumY[i], 2);
+        Aux = Aux + pow(NumY[i], 2);
       }
 
-      matriz[3][3] = aux;
-      aux = 0;
+      Matriz[3][3] = Aux;
+      Aux = 0;
 
       //B4
       for (int i = 0; i < totales; i++) {
-        aux = aux + NumZ[i] * NumY[i];
+        Aux = Aux + NumZ[i] * NumY[i];
       }
-      matriz[3][4] = aux;
+      Matriz[3][4] = Aux;
     }
 };
 

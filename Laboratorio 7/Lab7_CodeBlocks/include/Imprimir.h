@@ -9,7 +9,7 @@
 #include <iomanip>
 using namespace std;
 
-//.b=30
+//.b=29
 
 class Imprimir {
 
@@ -17,34 +17,40 @@ class Imprimir {
 
       //.i
       //Funcion que imprime los resultados
-      void imprimeResultados(int N, float wk, float xk, float yk, float b0, float b1, float b2, float b3, float zk) { //.m
+      void imprimeResultados(int N, float Wk, float Xk, float Yk, float B0, float B1, float B2, float B3, float Zk) { //.m
         cout << "N = " << N << endl;
         cout << setprecision(5) << fixed;
-        cout << "wk = " << wk << endl;
-        cout << "xk = " << xk << endl;
-        cout << "yk = " << yk << endl;
+        cout << "wk = " << Wk << endl;
+        cout << "xk = " << Xk << endl;
+        cout << "yk = " << Yk << endl;
         cout << "-----------------------" << endl;
-        cout << "b0 = " << b0 << endl;
-        cout << "b1 = " << b1 << endl;
-        cout << "b2 = " << b2 << endl;
-        cout << "b3 = " << b3 << endl;
+        cout << "b0 = " << B0 << endl;
+        cout << "b1 = " << B1 << endl;
+        cout << "b2 = " << B2 << endl;
+        cout << "b3 = " << B3 << endl;
         cout << "-----------------------" << endl;
-        cout << "zk = " << zk << endl;
+        cout << "zk = " << Zk << endl;
       }
 
+      //.i
+      //Funcion que imprime mensaje de no existe archivo
       void imprimeNoexiste() {
         cout << "\nEl archivo no existe" << endl << endl;
       }
 
+      //.i
+      //Funcion que imprime que los numeros son mayor a 0
       void imprimeMayor0(){
         cout << "\nLos datos no son mayores o iguales a 0" << endl << endl;
       }
 
+      //.i
+      //Funcion que imprime mensaje de archivo vacio
       void vacioArchivo() {
         cout << "\nEl archivo esta vacio" << endl << endl;
       }
 
-      //d.9
+      //.d=9
       //.d=6
 
 };

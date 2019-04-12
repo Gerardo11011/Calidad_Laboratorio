@@ -17,19 +17,19 @@ class Imprimir {
 
       //.i
       //Funcion que imprime los resultados
-      void imprimeResultados(int N, float wk, float xk, float yk, float b0, float b1, float b2, float b3, float zk) { //.m
+      void imprimeResultados(int N, float Wk, float Xk, float Yk, float B0, float B1, float B2, float B3, float Zk) { //.m
         cout << "N = " << N << endl;
         cout << setprecision(5) << fixed;
-        cout << "wk = " << wk << endl;
-        cout << "xk = " << xk << endl;
-        cout << "yk = " << yk << endl;
+        cout << "wk = " << Wk << endl;
+        cout << "xk = " << Xk << endl;
+        cout << "yk = " << Yk << endl;
         cout << "-----------------------" << endl;
-        cout << "b0 = " << b0 << endl;
-        cout << "b1 = " << b1 << endl;
-        cout << "b2 = " << b2 << endl;
-        cout << "b3 = " << b3 << endl;
+        cout << "b0 = " << B0 << endl;
+        cout << "b1 = " << B1 << endl;
+        cout << "b2 = " << B2 << endl;
+        cout << "b3 = " << B3 << endl;
         cout << "-----------------------" << endl;
-        cout << "zk = " << zk << endl;
+        cout << "zk = " << Zk << endl;
       }
 
       //.i

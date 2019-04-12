@@ -21,58 +21,58 @@ using namespace std;
 
 class Lectora {
     private:
-      fstream archivo;
-      float wk; //.m
-      float xk; //.m
-      float yk; //.m
-      float totales;
-      bool vacioArch;
-      bool numerror;
+      fstream Archivo;
+      float Wk; //.m
+      float Xk; //.m
+      float Yk; //.m
+      float Totales;
+      bool Vacioarch;
+      bool Numerror;
 
     public:
       //.i
       //Constructor
-      Lectora (string nombre){
-        archivo.open(nombre.c_str());
-        wk = 0; //.m
-        xk = 0; //.m
-        yk = 0; //.m
-        vacioArch = false;
-        totales = 0;
-        numerror = false;
+      Lectora (string Nombre){
+        Archivo.open(Nombre.c_str());
+        Wk = 0; //.m
+        Xk = 0; //.m
+        Yk = 0; //.m
+        Vacioarch = false;
+        Totales = 0;
+        Numerror = false;
       }
       //.i
       //Destructor
       ~Lectora(){
-        archivo.close();
+        Archivo.close();
       }
       //.i
         //Funcion que obtiene el valor de wk
       float getwk(){  //.m
-        return wk; //.m
+        return Wk; //.m
       }
       //.i
       //Funcion que obtiene el valor de la cantidad de xk
       float getxk(){ //.m
-        return xk; //.m
+        return Xk; //.m
       }
 
       //.i
       //Funcion que obtiene el valor de yk
       float getyk(){
-        return yk;
+        return Yk;
       }
 
-      //Funcion que comprueba si el archivo esta vacio
+      //Funcion que comprueba si el Archivo esta vacio
       bool getVacioArchivo(){
-        return vacioArch;
+        return Vacioarch;
       }
 
 
       //.i
-      //Funcion que comprueba si existe el archivo
+      //Funcion que comprueba si existe el Archivo
       bool existeArchivo(){
-        if (archivo.is_open()) {
+        if (Archivo.is_open()) {
           return true;
         }
         else {
@@ -83,77 +83,76 @@ class Lectora {
       //.i
       //Funcion que retorna el conteo de total de datos
       float getTotales(){
-        return totales;
+        return Totales;
       }
 
       //.i
-      //Funcion que retorna el booleano de numerror
+      //Funcion que retorna el booleano de Numerror
       bool getNumerror(){
-        return numerror;
+        return Numerror;
       }
 
       //.i
       //.d=4
       //.d=11
-      //Funcion que cuenta y lee los datos del archivo y los almacenas
+      //Funcion que cuenta y lee los datos del Archivo y los almacenas
       void Contar(vector<float>&NumX,vector<float>&NumY, vector<float>&NumZ, vector<float>&NumW){
-        string linea;
+        string Linea;
         string X;
         string Y, Z, W;
-        string auxwk, auxxk, auxyk, aux;
-        float num = 0;
-        int renglon = 0;
-        while(! archivo.eof()){
-            getline(archivo,linea);
-            //IF que verifica que el archivo no este vacio
-            if (linea[0] == '\0' && vacioArch == false && renglon == 0) {
-              renglon++;
-              vacioArch = true;
+        string Auxwk, Auxxk, Auxyk, Aux;
+        float Num = 0;
+        int Renglon = 0;
+        while(! Archivo.eof()){
+            getline(Archivo,Linea);
+            //IF que verifica que el Archivo no este vacio
+            if (Linea[0] == '\0' && Vacioarch == false && Renglon == 0) {
+              Renglon++;
+              Vacioarch = true;
             }
-            //almacena el dato del primer renglon unciamente
-            if(renglon == 0){
-              auxwk = linea.substr(0, linea.find(','));
-              wk = atof(auxwk.c_str());
-              auxxk = linea.substr(linea.find(',')+1, linea.find_last_of(','));
-              xk = atof(auxxk.c_str());
-              xk = xk;
-              auxyk = linea.substr(linea.find_last_of(',')+1, linea.size());
-              yk = atof(auxyk.c_str());
-              if (wk < 0 || xk < 0 || yk < 0) {
-                numerror = true;
+            //almacena el dato del primer Renglon unciamente
+            if(Renglon == 0){
+              Auxwk = Linea.substr(0, Linea.find(','));
+              Wk = atof(Auxwk.c_str());
+              Auxxk = Linea.substr(Linea.find(',')+1, Linea.find_last_of(','));
+              Xk = atof(Auxxk.c_str());
+              Auxyk = Linea.substr(Linea.find_last_of(',')+1, Linea.size());
+              Yk = atof(Auxyk.c_str());
+              if (Wk < 0 || Xk < 0 || Yk < 0) {
+                Numerror = true;
               }
-              renglon++;
+              Renglon++;
             }
-            //Lee el resto de las lineas y almacena los valores que estan en el archivo
-            else if(renglon > 0 && linea.size() > 1){
-              aux = linea.substr(0,linea.find(','));
-              num = atof(aux.c_str());
+            //Lee el resto de las lineas y almacena los valores que estan en el Archivo
+            else if(Renglon > 0 && Linea.size() > 1){
+              Aux = Linea.substr(0,Linea.find(','));
+              Num = atof(Aux.c_str());
 
-              NumW.push_back(num);
+              NumW.push_back(Num);
 
-              linea.erase(0,linea.find(',')+1);
-              aux = linea.substr(0,linea.find(','));
-              num = atof(aux.c_str());
+              Linea.erase(0,Linea.find(',')+1);
+              Aux = Linea.substr(0,Linea.find(','));
+              Num = atof(Aux.c_str());
 
-              NumX.push_back(num);
+              NumX.push_back(Num);
 
-              linea.erase(0,linea.find(',')+1);
-              aux = linea.substr(0,linea.find(','));
-              num = atof(aux.c_str());
+              Linea.erase(0,Linea.find(',')+1);
+              Aux = Linea.substr(0,Linea.find(','));
+              Num = atof(Aux.c_str());
 
-              NumY.push_back(num);
+              NumY.push_back(Num);
 
-              linea.erase(0,linea.find(',')+1);
-              aux = linea.substr(linea.find(',')+1);
-              num = atof(aux.c_str());
-              NumZ.push_back(num);
+              Linea.erase(0,Linea.find(',')+1);
+              Aux = Linea.substr(Linea.find(',')+1);
+              Num = atof(Aux.c_str());
+              NumZ.push_back(Num);
 
-              //IF que comprueba que si el numero es menor a 0 y cambia el estado de numerror
-              if (NumW[totales] < 0 || NumX[totales] < 0 || NumY[totales] < 0 || NumZ[totales] < 0) {
-                numerror = true;
+              //IF que comprueba que si el numero es menor a 0 y cambia el estado de Numerror
+              if (NumW[Totales] < 0 || NumX[Totales] < 0 || NumY[Totales] < 0 || NumZ[Totales] < 0) {
+                Numerror = true;
               }
               //Se cuentan el total de datos ingresados
-              totales++;
+              Totales++;
             }
         }
       }
