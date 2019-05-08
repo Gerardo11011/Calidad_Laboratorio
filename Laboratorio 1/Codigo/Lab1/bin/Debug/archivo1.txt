@@ -1,80 +1,79 @@
-	
-public class Lista {
-  	 
-	private Nodo inicio;
-	private Nodo fin; 	
-	private Nodo actual;
+Análisis de la Estimación de Tiempo
+1.	¿Cuál fue el tiempo en horas dedicado a cada uno de tus programas? ¿Cuál fue tu promedio de horas dedicadas por programa?
 
-	// constructor... crea una lista vac�a
-	public Lista() {
-		inicio = null;
-		fin = null;
-		actual = null;
-	}
-	
-	/*
-	 * Agrega al final de la lista el valor contenido en �dato�.
-	 * �actual� apunta al valor insertado.
-	 */
-	public void AgregaFin(double dato){
-		if	(inicio == null){
-			inicio = fin = actual = new Nodo(dato);
-		} else {
-			fin.setSig(new Nodo(dato));
-			actual = fin = fin.getSig();
-		}
-	}
-				
-	// Mueve �actual� al primer nodo de la lista. 
-	// Si la lista est� vac�a� actual <-- NULO.
-	public void IrInicio(){
-		actual = inicio;
-	}
-	 	 	
-	// Mueve �actual� al siguiente valor en la lista, si puede.
-	// Regresa TRUE si lo pudo mover, FALSE si no pudo.
-	public boolean Siguiente(){   	 
-		if (actual == null) {
-			return false;
-		} else {
-			if (actual.getSig() == null) {
-				return false;
-			} else {
-				actual = actual.getSig();
-				return true;
-			}
-		}
-	}
-	
-	// Regresa el valor al que apunta �actual�. Si �actual� es NULO, regresa 0 (cero).
-	public double ValorActual(){
-		if (actual == null) {
-			return 0;
-		} else {
-			return actual.getDato();
-		}
-	}
-	
-	// Regresa TRUE si la lista est� vac�a, si no regresa FALSE
-	public boolean Vacio(){
-		return (inicio == null);
-	}
-	
-	/* Regresa el promedio de los datos almacenados en la lista.
-	   Si la lista est� vac�a regresa 0 (cero). */
-	public double Promedio(){
-		if (inicio == null) {
-			return 0.0;
-		} else {
-			this.IrInicio();
-			double suma = this.ValorActual();
-			int n = 1;
-			while (this.Siguiente()) {
-				suma += this.ValorActual();
-				n += 1;
-			}
-			return suma / n;
-		}
-		
-	}
-}
+•	Programa 1
+o	Tiempo: 5.02
+•	Programa 2
+o	Tiempo: 8.65
+•	Programa 3
+o	Tiempo: 4.43
+•	Programa 4
+o	Tiempo: 3.52
+•	Programa 5
+o	Tiempo: 1.45
+•	Programa 6
+o	Tiempo: 3.18
+•	Programa 7
+o	Tiempo: 3.88
+•	Total
+o	Tiempo total: 30.08
+o	Promedio: 4.30
+
+2.	¿Cuál fue el programa al que le dedicaste más tiempo y a cuál menos? ¿Por qué?
+Al programa que le dedique mas tiempo fue al programa 2 y esto se debió principalmente a que malinterprete los requerimientos y no comprendí algunos de ellos, ya que al no poner a analizarlo al fondo y empezar a codificar lo mas antes posibles no tuve completo entendimiento de que era lo que me pedían, y muchas veces lo que hacia era que me daban cálculos erróneos por no saber como se calcula bien las líneas de codigo.
+Al programa que menos le dedique fue al 5 ya que este era el mas pequeño de todos y por que tambien ya empezaba a leer cada vez mas los requerimientos para evitar equivocarme y en este caso solo tuve que realizar el codigo una vez junto con los cálculos, por lo que fue mas rapido de lo que normalmente seria.
+3.	¿Cuál fue el % de error en la estimación de tiempo (real/plan-1) en tus programas 1 al 7?
+En promedio, ¿Cuál fue el % de error en la estimación de tiempo de estos 7 programas juntos?
+
+•	Programa 1
+o	Error: -11.2%
+•	Programa 2
+o	Error: 15.3%
+•	Programa 3
+o	Error:  -35.6%
+•	Programa 4
+o	Error:  29.4%
+•	Programa 5
+o	Error: 21%
+•	Programa 6
+o	Error: -46.8%
+•	Programa 7
+o	Error: -45.5%
+•	Promedio
+o	Plan: 37.04 h
+o	Actual: 30.08
+o	Error: 0.83%
+
+4.	¿Cuál fue el programa con mayor error de estimación de tiempo y cuál el menor? ¿Por qué?
+El programa con mayor error fue el programa 3, ya que en este caso ya que aquí, aunque las líneas de codigo no fueron tantas malinterprete la forma de hacer los cálculos, por lo que estuve mucho tiempo intentado averiguar como era que se tenia que hacer el codigo para poder obtener los cálculos necesarios, por eso aunque estimaba que iba a tardar poco y al final no realice muchas líneas de codigo tarde en empezar a desarrollarlas de manera correcta
+El programa con menor error fue el 1 debido a que cuando leí los requerimientos entendi lo que tenia que hacer y se parecía a programas que ya habia hecho anteriormente por lo que al tener ya algo de experiencia fue donde mejor me salio la estimación.
+5.	En aquellos programas donde pudiste utilizar el método PROBE “A” o el “B”, ¿El tiempo real estuvo dentro del intervalo de predicción estadístico del 70%? Si no estuvo, ¿Qué pasó?
+En este caso no tengo la información requerida ya que nunca utilice los métodos A o B del probe wizard, por lo que no dispongo información
+6.	¿Cuál fue la productividad de cada uno de tus programas? ¿Cuál fue tu productividad promedio?
+
+•	Programa 1
+o	Productividad: 21.7 (LOC/Hr)
+•	Programa 2
+o	Productividad: 18.2 (LOC/Hr)
+•	Programa 3
+o	Productividad: 25 (LOC/Hr)
+•	Programa 4
+o	Productividad: 24.5 (LOC/Hr)
+•	Programa 5
+o	Productividad: 16.6 (LOC/Hr)
+•	Programa 6
+o	Productividad: 43.4 (LOC/Hr)
+•	Programa 7
+o	Productividad: 57.2 (LOC/Hr)
+•	Promedio
+o	Productividad: 29.51 (LOC/Hr)
+
+7.	¿Cuál es la tendencia de tu productividad? ¿Va a la baja, o al alta? ¿Es inestable? ¿Qué puedes hacer para mejorarla?
+
+La productividad va a la alta, por un tiempo estuvo estable en la que bajaba y subía 	muy poco, y fue al final donde a partir del programa 5, que fue la que obtuvo la productividad mas baja entre todos los laboratorios, despego y empezó a ir a la alta hasta alcanzar su pico en el programa 7, por lo que debo de evitar que baje demasiado y buscar que se mantenga estable entre los 25 y 30 LOC/Hr.
+8.	¿Qué tanto fueron afectados los errores de estimación de tiempo por tus errores de estimación del tamaño?
+Fueron afectados, pero no tanto, ya que hubo unos casos donde mi porcentaje de error en el tamaño fue mucho mas grande de que mi porcentaje de error en el tiempo, y esto fue debido a lo que tardaba en comprender los requerimientos del programa, por lo que si hubo ocasiones en las que si me afecto pero en otras donde no
+9.	Basado en los datos históricos que has analizado sobre el error de estimación del tiempo, ¿Qué meta realista (alcanzable) te puedes poner para mejorar?
+Que puedo ser mas preciso con el tiempo que doy para acabar, m i meta seria un +-20% de error ya que es algo muy importante y para poder alcanzarla lo que necesito es seguir practicando con programas de diferentes tipos y agarrar mas experiencia, ya que la experiencia es una parte muy fundamental para poder dar correctamente bien un aproximado
+10.	¿Qué cambios vas a hacerle a tu proceso personal para alcanzar esta meta?
+Medir en todo momento los tiempos que me toma cada programa y cada fase, ya que asi sabre de verdad en que me equivoco y en cual estimo de mas o menos, por lo que a partir de ahora antes de empezar a codificar me voy a proponer un tiempo realista para acabar el codigo y anotar la diferencia en lo que tardo sobre lo que digo, y asi sucesivamente hasta ir perfeccionando la técnica
